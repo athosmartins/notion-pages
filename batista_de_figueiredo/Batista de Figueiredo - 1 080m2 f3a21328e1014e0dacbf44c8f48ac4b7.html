@@ -1,0 +1,700 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Batista de Figueiredo - 1.080m2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f3a21328-e101-4e0d-acbf-44c8f48ac4b7" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">1️⃣</span></div><h1 class="page-title">Batista de Figueiredo - 1.080m2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="cb7e45d0-f0fb-4229-be5c-5fcb01533351" class="">Vila Paris</h1><p id="6158d064-5748-40eb-9297-06d5e7b303ce" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d0e64c85-9db0-43eb-a4db-e295c980e504"><div style="font-size:1.5em"><span class="icon">🖼️</span></div><div style="width:100%"><strong>1.080m2</strong> com coeficiente de aproveitamento = 1.5</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6008f54c-c0e2-40bc-9e81-29ad7f4410fc"><div style="font-size:1.5em"><span class="icon">🚀</span></div><div style="width:100%">VGV =<strong> R$ 22 MM (já excluída a permuta)</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4f7bbe43-ffdd-4bda-8547-f32fedb638bb"><div style="font-size:1.5em"><span class="icon">💰</span></div><div style="width:100%">Valor de oferta do lote:<strong> </strong>R$ 2.4M + 160m2 de permuta</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5bbf22cc-56bd-4667-993d-72bcba3f6a91"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%"><strong>Aceita permuta no local</strong> como parte do pagamento</div></figure><p id="3518e18f-c036-40ce-92f5-324312f0fe1c" class="">
+</p><p id="931de008-8d71-4a0d-a94d-26eb2e1473a7" class=""><mark class="highlight-gray"><em>👇 Clique nas setas para expandir </em></mark></p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📍 Localização</summary><div class="indented"><p id="e7c30609-c354-4421-bec6-5e34c26ec8a5" class="">
+</p><p id="64ea6be1-3e31-4fac-b94f-a1ec6b2abf3c" class=""><strong>Rua Batista de Figueiredo, 154 - Vila Paris</strong></p><p id="fb1a1f78-ea02-49e4-af81-ae462134a087" class="">Link Google Maps: <a href="https://maps.app.goo.gl/qiEG3ZVVqCWbpPd87">👉 clique aqui</a></p><p id="7e70b8a5-db7a-41c5-8994-49a92f611aa2" class="">
+</p><figure id="09e0d0c2-8bb3-4856-b4fa-3921704db06b" class="image"><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/Untitled.png"><img style="width:655px" src="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/Untitled.png"/></a></figure><p id="d0ca1361-950b-4ca2-978f-10807b05430d" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📐 Dimensões e Zoneamento</summary><div class="indented"><p id="bd8f18e5-f87a-4709-a85f-4ddfb83e9cd3" class="">
+</p><ul id="5dce9ea6-fe81-4014-812f-d7094c9bb9df" class="bulleted-list"><li style="list-style-type:disc"><strong>Zona Fiscal:</strong> 126</li></ul><ul id="db8e135a-9345-402f-9261-a6a4d6238f5e" class="bulleted-list"><li style="list-style-type:disc"><strong>Quadra: </strong>004</li></ul><ul id="0b4905b8-d794-4656-8410-e37a25d18904" class="bulleted-list"><li style="list-style-type:disc"><strong>Lotes:</strong> 16, 15 e 14</li></ul><ul id="cd778884-677c-4718-ba91-7020dbf2605e" class="bulleted-list"><li style="list-style-type:disc"><strong>Área Total:</strong> 1.080m²<ul id="ee4f79a9-5151-4fca-843a-5e4afcae6032" class="bulleted-list"><li style="list-style-type:circle"><strong>Frente: </strong>36m </li></ul><ul id="a787a89c-03b8-4bd7-af1d-8534ea4dde4e" class="bulleted-list"><li style="list-style-type:circle"><strong>Fundos: </strong>30m</li></ul></li></ul><ul id="6b067cd9-7b66-439f-b15d-93c6f5c8e4d7" class="bulleted-list"><li style="list-style-type:disc"><strong>Zoneamento:</strong> OM-3<ul id="a970132b-dd7f-467f-ae36-5bc60b33c1ea" class="bulleted-list"><li style="list-style-type:circle"><strong>CA Máx: </strong>1.5</li></ul><ul id="8e66b6b3-b15b-4e20-8121-682e2d4970b4" class="bulleted-list"><li style="list-style-type:circle"><strong>Cota de terreno por unidade: </strong>40<ul id="71eea2c1-9273-4261-a855-be491122cf8d" class="bulleted-list"><li style="list-style-type:square">Número máximo de unidades: 27</li></ul></li></ul><ul id="5323eb9e-eb1c-4ef8-a589-9dcf5b30b6aa" class="bulleted-list"><li style="list-style-type:circle"><strong>Área Permeável Mínima:</strong> 20%</li></ul><ul id="feef746b-87e1-47df-b0d1-2d3e7b6b3a3d" class="bulleted-list"><li style="list-style-type:circle"><strong>⚠️ Altimetria máxima:</strong> cota 955m <ul id="1256c523-40ba-448a-aaab-e87afd651216" class="bulleted-list"><li style="list-style-type:square">O terreno está situado na cota 930m, portanto altimetria máxima de ~25m </li></ul></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⬇️ Informação Básica</summary><div class="indented"><p id="1ed9ef03-65ec-4c2d-8bd0-52ecca48d8fd" class="">
+</p><p id="3ff2027a-05dc-4790-b215-131be055afd5" class="">Clique nos links abaixo para baixar: <div class="indented"><ul id="b2f7a27f-1405-4a0b-8149-67d26946e88a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?id=1u_nPBZ2Tb8ERDD3BQU0Z4TztzMxeS1bn&amp;export=download">👉 Informação básica - Lote 16</a></li></ul><ul id="86ba7ad0-2b56-46ff-acf5-067f81ac0476" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?id=1E4igHZiGayRDf2lo6vAk1y90qJpMvSqK&amp;export=download">👉 Informação básica - Lote 15</a></li></ul><ul id="1363e95c-9883-4ba9-8781-c79b42e26188" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?id=1pWJuDgDz1_58RvGdZKl5o7kpm4kVTjza&amp;export=download">👉 Informação básica - Lote 14</a></li></ul></div></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏢 Produto Sugerido</summary><div class="indented"><p id="e8421744-6e94-4127-aec4-bf5883e8c2c4" class="">
+</p><p id="fe66d61a-e44a-47b4-9fd0-fe2048fff3fc" class="">Com base na <a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Pesquisa%20de%20Mercado%20f0c34db014f54f278e552b4c74674814.html">pesquisa de mercado</a> e <a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Demanda%20por%20Apartamentos%20c24015667af64d4a87c46c55b47bb58c.html">pesquisa de demanda</a>, sugerimos o produto:</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8b308dc9-f9b0-4633-9b87-680133388b19"><div style="font-size:1.5em"><span class="icon">🏡</span></div><div style="width:100%"><strong>3 quartos com 91m2 e 2 vagas por R$ 13.5k/m2</strong> </div></figure><p id="5d36ec97-0a05-498c-8a1e-4d500c583e40" class="">
+</p><p id="e8136ba7-14bf-4abe-a16a-785333a7b512" class="">É possível esgotar o coeficiente de aproveitamento com <strong>15 unidades</strong>: <div class="indented"><blockquote id="ee357b12-584a-4b2b-97fd-f0b7151bec93" class=""><strong>3 unidades garden</strong><ul id="444a040d-21bc-4b98-bdbb-ac5801f33aba" class="bulleted-list"><li style="list-style-type:disc"><em>91.33m2 cobertos + 40m2 descobertos → 2 vagas (1 unidade)</em></li></ul><ul id="0d0ab474-1f63-4a59-81ae-4d9d1eccfc17" class="bulleted-list"><li style="list-style-type:disc"><em>91.33m2 cobertos + 28m2 descobertos → 2 vagas (1 unidade)</em></li></ul><ul id="73210620-fbf7-4b95-b4c8-dff394c79509" class="bulleted-list"><li style="list-style-type:disc"><em>91.33m2 cobertos + 24m2 descobertos → 2 vagas (1 unidade)</em></li></ul></blockquote><p id="07891da8-4b81-4c88-8903-5e4903b90a02" class="">
+</p><blockquote id="e1a81b2b-d0b2-4917-a697-e0166b430e25" class=""><strong>9 unidades tipo</strong><ul id="3cffae9e-e4de-4573-89db-b1e2952cace8" class="bulleted-list"><li style="list-style-type:disc"><em>91.33m2 cobertos → 2 vagas</em></li></ul></blockquote><p id="3c74299c-d765-430a-a51b-947a33fa43ad" class="">
+</p><blockquote id="aaa1fc60-011b-41ae-8ad6-e6a193495680" class=""><strong>3 Coberturas</strong><ul id="640652b9-3355-4a58-86b0-6956500564e8" class="bulleted-list"><li style="list-style-type:disc"><em>127m2 cobertos + 55m2 descobertos → 3 vagas</em><ul id="c56a610d-44eb-4941-89cd-f389da1d9b6b" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Foram previstas unidades com 4 quartos, sendo uma suíte no 2o pavimento</mark></li></ul><ul id="551efae8-8e37-480f-ab02-f8acd07eb51d" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">91.33m2 cobertos no 1o nível</mark></li></ul><ul id="962ed05a-0a69-46df-8818-31f7528d86bd" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">36.55m2 cobertos + 55m2 descobertos no 2o nível</mark></li></ul></li></ul></blockquote></div></p><p id="14dd3e2c-231d-47ac-8dfb-3ac29752f3f6" class="">
+</p><h3 id="1ce67a9a-cd94-4b79-8a97-d05c3aec7607" class=""><a href="https://drive.google.com/uc?id=1i5tnsji-Rmg3b18AYHg8b4pSZ6MFiIf8&amp;export=download"><strong><mark class="highlight-teal_background">Baixar Estudo de Viabilidade Arquitetônica</mark></strong></a></h3><p id="8353cfe6-041f-4d6c-a64e-f3ceadfff27e" class="">
+</p><p id="f0bb985b-73b0-4c63-af0a-e0d02a874000" class=""><strong>⚠️ Apesar do negócio contemplar os 3 lotes, o lote 14 não participa da implantação do empreendimento, pois no mesmo será construída um casa para contemplar a permuta no local. Mais informações na seção </strong><strong><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7.html">Valor do Lote</a></strong></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏗 <a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%206aa1046552f243f0a0b6b2ebc236e87e.html">Viabilidade Arquitetônica</a></summary><div class="indented"><p id="4354c765-cbaa-45c2-8919-86b5085cbea1" class=""><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%206aa1046552f243f0a0b6b2ebc236e87e.html">👉 Clique aqui</a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📈 Cálculo de VGV</summary><div class="indented"><p id="db1f90cf-70c5-4dfe-8905-8e5c93632bcb" class="">Premissas: </p><ul id="5f2b09b9-d4dd-4e0d-afc9-43eccc0871a5" class="bulleted-list"><li style="list-style-type:disc">1m2 descoberto = 0.5m2 coberto </li></ul><ul id="f79bea31-c284-4490-9e30-051729b60a28" class="bulleted-list"><li style="list-style-type:disc">R$ /m2 venda = R$ 13.5k/m2</li></ul><figure id="ff5c8135-a6fc-43b6-a1d5-d46ea7738369" class="image"><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/Untitled%201.png"><img style="width:1296px" src="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/Untitled%201.png"/></a></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📝 Orçamento de ODC/TDC</summary><div class="indented"><p id="7e560c81-74c5-41c9-8a25-88caf89fae4e" class="">Neste terreno, é mais vantajoso comprar <strong>TDC</strong> do que ODC<div class="indented"><ul id="9a9ae3b3-7992-43d9-bee0-0914507bdfe4" class="toggle"><li><details open=""><summary><strong>❌ ODC = R$ 1.050/m2</strong></summary><ul id="6ef85d00-2722-4f4f-a336-f7065ae63383" class="bulleted-list"><li style="list-style-type:disc">Em caso de pagamento à vista existe 30% de desconto, portanto R$ 1.050/m2</li></ul></details></li></ul><ul id="f54d7330-8d28-4a9a-bd43-6ed158b6eeab" class="toggle"><li><details open=""><summary>✅ <strong>TDC =</strong> <strong>R$ 250/m2 </strong></summary><ul id="e6341cd4-0318-4cd4-bb78-f1b02144e9c7" class="bulleted-list"><li style="list-style-type:disc">Valor obtido junto à <strong>Decisão Engenharia</strong> em <strong>04/abr/2024</strong></li></ul><ul id="1137ab0e-2e72-4ac7-915f-e6f9c31b4883" class="bulleted-list"><li style="list-style-type:disc">Conforme <a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%206aa1046552f243f0a0b6b2ebc236e87e.html">Estudo de Viabilidade Arquitetônica</a>, serão necessários <strong>386m2 </strong>de TDC para o empreendimento, totalizando <strong>R$ 96.5k em TDC</strong> </li></ul></details></li></ul></div></p><p id="3a37d288-f95d-44c8-b3e0-731f6933145b" class="">
+</p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">💰 Valor do Lote e Comissão</summary><div class="indented"><ul id="0b816347-c4f7-42aa-8052-b6034fae3cd4" class="bulleted-list"><li style="list-style-type:disc">Os proprietários pedem <strong>R$ 3.5MM</strong> no lote <figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d7a57ea9-18a6-4010-b326-396805910a88"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">O valor equivale a R$ <strong>3.240/m2</strong></div></figure></li></ul><ul id="7e4ab11b-2150-4444-b75d-078ac418dfb1" class="bulleted-list"><li style="list-style-type:disc"><strong>Parte do valor deve ser em permuta no local, através da construção de uma casa no lote 14</strong><ul id="ab0d4424-5272-4d47-b8d3-0801161ce043" class="bulleted-list"><li style="list-style-type:circle">Sobre a parte a ser paga em permuta no local, a incorporadora deverá arcar com comissão de 5% no ato da assinatura do contrato</li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⚖️ Situação Jurídica</summary><div class="indented"><ul id="959dba23-692f-44d2-ab37-42fdd2109bf8" class="bulleted-list"><li style="list-style-type:disc"><strong>✅ Imóvel registrado de forma regular em nome dos atuais proprietários (5 herdeiros)</strong><ul id="7002c06f-e543-4b63-bfdb-017133c3320e" class="bulleted-list"><li style="list-style-type:circle">Foi feita doação em vida para os herdeiros</li></ul><ul id="32991189-65c6-45ff-a6e3-294147ca3d8a" class="bulleted-list"><li style="list-style-type:circle">Usufruto em nome dos pais foi cancelado em 2020 </li></ul><ul id="38070095-174f-4521-a226-c6e86cf7d523" class="bulleted-list"><li style="list-style-type:circle">Não há nenhuma forma de dívida ou ônus sobre o imóvel </li></ul><ul id="e90769ab-8562-41f1-a32e-9a93da671216" class="bulleted-list"><li style="list-style-type:circle">Matrícula atualizada disponível mediante solicitação</li></ul><ul id="beb33b77-ec06-4618-91de-76c20d22955d" class="bulleted-list"><li style="list-style-type:circle">Matrícula atualizada disponível - <a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20terreno%20na%20Rua%20Haiti%2064%2C%20Sion">entre em contato para solicitar</a></li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔎 <a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Pesquisa%20de%20Mercado%20f0c34db014f54f278e552b4c74674814.html">Pesquisa de Mercado</a></summary><div class="indented"><p id="236f900f-9f68-4618-9238-902333bf9c72" class=""><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Pesquisa%20de%20Mercado%20f0c34db014f54f278e552b4c74674814.html">👉 Clique aqui </a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏡 <a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Demanda%20por%20Apartamentos%20c24015667af64d4a87c46c55b47bb58c.html">Demanda por Apartamentos</a></summary><div class="indented"><p id="14521cd3-b45d-41c3-9c4a-bf9071fe165d" class=""><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Demanda%20por%20Apartamentos%20c24015667af64d4a87c46c55b47bb58c.html">👉 Clique aqui</a></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">➕ Possibilidades de Expansão</summary><div class="indented"><ul id="4a27f917-60e8-4497-8efc-bc1162b7bddd" class="bulleted-list"><li style="list-style-type:disc"><strong>O lote 17 (360m2) está à venda por R$ 1.5MM</strong>, mas tem problemas documentais que o proprietário está resolvendo <ul id="06fd789d-b474-4a9b-ac92-f18b903191ca" class="bulleted-list"><li style="list-style-type:circle">Já recusou proposta de R$ 1MM no passado </li></ul></li></ul><ul id="fcd47319-83a3-4cc5-8ab3-e435c98cfef9" class="bulleted-list"><li style="list-style-type:disc">O lote 13 (360m2) pertence a uma das irmãs herdeira dos 3 lotes em oferta <ul id="e3ea4aa6-c8fb-4013-910a-7282d8c65065" class="bulleted-list"><li style="list-style-type:circle">Não está à venda, mas cogita vender em caso de uma <strong>proposta muito boa</strong></li></ul><ul id="12fb2b97-2440-4547-945a-377b55b87309" class="bulleted-list"><li style="list-style-type:circle">“Proposta muito boa” → R$ 1.5 MM cada (estimativa informal, sem confirmação pela proprietária)</li></ul></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📞 Contato</summary><div class="indented"><p id="2b9f7180-f454-4694-9981-91d3ec030651" class=""><strong>Athos Bernardes</strong></p><ul id="56af901d-0ae8-46b0-b8fe-12c21852c2e6" class="bulleted-list"><li style="list-style-type:disc">CRECI-MG 55.358</li></ul><ul id="5baaeda7-576b-40fd-8a9a-2891839bf287" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20terreno">(31) 98859-8058</a></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>🔀 Outros Terrenos</strong></summary><div class="indented"><p id="c52446dd-fcfd-40f3-83f7-82638f75f985" class=""><a href="https://www.notion.so/Terrenos-em-Oferta-96462f4abab540b68793cd2907ff54d5?pvs=21">👉 Conheça nossas outras opções em BH</a></p><p id="cc55eb99-dbc5-4127-ae99-b32b41b968e8" class="">
+</p></div></details><p id="a0c3d168-be69-4aaf-bfff-fe2403c6ac6b" class="">
+</p><div id="91100d07-378e-47e5-85ce-6eeb80858777" class="collection-content"><h4 class="collection-title">MATERIAL DE REFERÊNCIA</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="6aa10465-52f2-43f0-a0b6-b2ebc236e87e"><td class="cell-title"><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%206aa1046552f243f0a0b6b2ebc236e87e.html"><span class="icon">🏛️</span>Estudo de Viabilidade Arquitetônica</a></td></tr><tr id="f0c34db0-14f5-4f27-8e55-2b4c74674814"><td class="cell-title"><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Pesquisa%20de%20Mercado%20f0c34db014f54f278e552b4c74674814.html"><span class="icon">🤓</span>Pesquisa de Mercado</a></td></tr><tr id="c2401566-7af6-4d4a-87c4-6c55b47bb58c"><td class="cell-title"><a href="Batista%20de%20Figueiredo%20-%201%20080m2%20f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL%20DE%20REFERE%CC%82NCIA%2091100d07378e47e585ce6eeb80858777/Demanda%20por%20Apartamentos%20c24015667af64d4a87c46c55b47bb58c.html"><span class="icon">🏠</span>Demanda por Apartamentos</a></td></tr></tbody></table><br/><br/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
