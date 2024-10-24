@@ -8,5 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@hotjar/browser": "^1.0.9"
+  }
 }
