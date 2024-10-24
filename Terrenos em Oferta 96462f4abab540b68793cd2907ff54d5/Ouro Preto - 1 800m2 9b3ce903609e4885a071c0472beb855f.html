@@ -1,0 +1,724 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Ouro Preto - 1.800m2</title><style>
+<link rel="stylesheet" href="/style.css">
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="9b3ce903-609e-4885-a071-c0472beb855f" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">1️⃣</span></div><h1 class="page-title">Ouro Preto - 1.800m2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="711e3b14-2093-4d74-bc51-a10abc958bbc" class="">Santo Agostinho</h1><p id="5c9be3dc-9337-425e-8827-a3ef36db255a" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ca130efc-051a-4268-94c1-d9bd597e8235"><div style="font-size:1.5em"><span class="icon">🖼️</span></div><div style="width:100%"><strong>1.800m2, </strong>com<strong> 72m de frente</strong> pra Avenida do Contorno e <strong>50m2 de frente</strong> para a Rua Ouro Preto</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="6d74b9ec-cfbb-46cc-8425-d1e42bf139fe"><div style="font-size:1.5em"><span class="icon">🛠</span></div><div style="width:100%">Zoneamento<strong> OP-3</strong> com coeficiente de aproveitamento = <strong>5.0</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8be733b9-1b58-470c-b162-3fc486787a5a"><div style="font-size:1.5em"><span class="icon">🚀</span></div><div style="width:100%">VGV =<strong> R$ 41 MM</strong></div></figure><p id="c35d60f4-e8de-4caf-ba38-681808dab2f7" class="">
+</p><p id="31ab1a39-4d1c-4ab6-a386-cc065e68ebd7" class=""><em><mark class="highlight-gray">👇 Clique nas setas para expandir </mark></em></p><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📍 Localização</summary><div class="indented"><p id="7b6bb0ae-a19a-4784-8de5-1123822537fc" class="">
+</p><p id="a2aaf356-1c7f-445b-84d0-a55c40cf3c6d" class=""><strong>Esquina de Avenida do Contorno com Rua Ouro Preto - Santo Agostinho</strong></p><p id="68b25a7c-ea9d-45ea-a650-8d700a5f7a3c" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="93c8223f-b9f4-400b-961b-30eabf79044f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"> A 1 quarteirão do lançamento Flow, da Somattos - <strong>70% vendido em 7 meses<br/><br/><br/></strong>Mesmo quarteirão do Rio Branco, da EPO </div></figure><p id="de1cbb84-39ba-487a-b83a-b5f779f6727a" class="">
+</p><p id="89dfec23-97bd-478e-9405-a662dccd501d" class="">Link Google Maps: <a href="https://maps.app.goo.gl/9MnBwThTjwRYNLa98">👉 clique aqui</a></p><p id="370cbd2d-5bb4-4ee4-b7d4-5bf451d85f0c" class="">
+</p><p id="a3f07fe3-2b35-4259-9a05-d6b963bf2af2" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📐 Dimensões e Zoneamento</summary><div class="indented"><p id="a63b0258-cb6c-4146-b50c-d4734b1ffe4c" class="">
+</p><ul id="dbe852d7-f1fc-4957-a649-6cf37a262ea3" class="bulleted-list"><li style="list-style-type:disc"><strong>Zona Fiscal:</strong> 007</li></ul><ul id="5f2907c4-f93c-42ca-be91-1ef7916a1365" class="bulleted-list"><li style="list-style-type:disc"><strong>Quadra: </strong>009</li></ul><ul id="246af0e5-83f9-40a3-bbce-d324ae1e9036" class="bulleted-list"><li style="list-style-type:disc"><strong>Lotes:</strong> 005A e 006A</li></ul><ul id="5be76bd4-5847-41c8-8be1-0af3b7f152ca" class="bulleted-list"><li style="list-style-type:disc"><strong>Área Total:</strong> 600m²<ul id="80a78376-d2df-4d1a-aa5e-cc05eaee1b42" class="bulleted-list"><li style="list-style-type:circle"><strong>Frente: </strong>20m </li></ul><ul id="003bb73f-759d-43c7-b837-5aecdfc4e066" class="bulleted-list"><li style="list-style-type:circle"><strong>Fundos: </strong>30m</li></ul></li></ul><ul id="54c5973e-7be8-4128-9335-e3ac9a01be9a" class="bulleted-list"><li style="list-style-type:disc"><strong>Zoneamento:</strong> OP-3<ul id="ec4ad61c-acda-449e-a837-b0a82d0a8b98" class="bulleted-list"><li style="list-style-type:circle"><strong>CA Máx: </strong>5.0</li></ul><ul id="f26e9352-67bc-4ad8-9b30-5169b0505393" class="bulleted-list"><li style="list-style-type:circle"><strong>Cota de terreno por unidade: </strong>N/A</li></ul><ul id="06021b82-55ca-430e-b7f6-ab0b232f54eb" class="bulleted-list"><li style="list-style-type:circle"><strong>Área Permeável Mínima:</strong> 20%</li></ul></li></ul><p id="2a2e6092-7403-4509-bf6e-6565ed476fce" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⬇️ Informação Básica</summary><div class="indented"><p id="03660b8e-09ff-4398-870f-3732f02cce48" class="">
+</p><p id="41c5eda3-fb9d-4714-a555-1a0d62a2e344" class="">Clique nos links abaixo para baixar: <div class="indented"><ul id="8da4d487-1475-4a7b-8af4-29ea30aa4ef9" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?export=download&amp;id=1zQ2FLccJdqIZ5tQJThfZ1mwXpS7jI4YD">👉 Informação básica - Lote 006A</a></li></ul><ul id="e8acb361-6223-4af3-8d35-ff1e7e2bb4c2" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?export=download&amp;id=1zRcWIbNf3EyvObjfVfLFKjmoY9noa0IR/">👉 Informação básica - Lote 005A</a></li></ul><p id="9bf59f8c-108d-4465-9d1f-60c1b1b98ff7" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏗 <a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%20fa5eea6bbf4e48148cf669c91a44b473.html">Viabilidade Arquitetônica</a></summary><div class="indented"><p id="c3221aa7-e926-4945-b3c8-e5fbfb13431d" class="">
+</p><p id="dbdf1d91-e45e-4fda-8ea5-d36c3a9db415" class="block-color-teal_background"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%20fa5eea6bbf4e48148cf669c91a44b473.html">👉 Clique aqui</a></p><p id="b8fcf56c-27da-4e87-8603-34071cd6fab8" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📈 Cálculo de VGV</summary><div class="indented"><p id="9372d1d2-ab8c-46cd-b683-7ca33f44d390" class="">
+</p><p id="9ec340d8-250a-497a-a42b-11301bd18fd9" class="">Premissa: 1m2 descoberto = 0.5m2 coberto </p><p id="a625e080-fa49-4e8b-9582-96b12f9de9f3" class="">
+</p><figure id="e383f556-1400-431f-88cb-3acb9a380109" class="image"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled.png"><img style="width:1348px" src="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled.png"/></a></figure><h3 id="4801f8ab-32d7-4be2-b64c-2e49c0518cbf" class=""><strong>    VGV Total = R$ 41.4M</strong></h3><p id="65ae27e3-3c41-4114-99a2-7e0144b64f9f" class="">
+</p><p id="1364e1fd-18aa-4e63-86c1-d38ec0dd9fcf" class="block-color-teal_background">   <a href="https://docs.google.com/spreadsheets/d/1w80Aw0tCmIA39j4xR04oFjpHu4Z2l8SoOfhdCE-7wBQ/export?format=xlsx">👉 Clique aqui para baixar a planilha</a></p><p id="cd413eee-43cb-49c2-85f0-14c206416d59" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📝 Orçamento de ODC/TDC</summary><div class="indented"><p id="5629dcdf-e967-4dde-ad89-545dfb45d10d" class="">
+</p><ul id="4f9c37e7-b0ee-4118-b05a-838e751fc7ed" class="bulleted-list"><li style="list-style-type:disc">✅ ODC = R$ 2.800/m2<ul id="d215584f-ae46-4965-8c8c-b2cef67e33ac" class="bulleted-list"><li style="list-style-type:circle">Em caso de pagamento à vista existe 30% de desconto, portanto <strong>R$ 1.960/m2</strong></li></ul><ul id="da22706d-7497-450d-be56-9fb461766d5c" class="bulleted-list"><li style="list-style-type:circle">Este pagamento à vista pode ser feita quando do <strong>comunicado do início de obras</strong></li></ul></li></ul><ul id="cdd93dd8-48d9-4367-8ed1-350ee9cffac2" class="bulleted-list"><li style="list-style-type:disc">❌ <strong>TDC</strong> = R$ 2.800/m2</li></ul><p id="e2c0100d-aa53-4335-ac9e-065981fa5811" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">💰 Valor do Lote</summary><div class="indented"><p id="9a8c5b67-f3d8-432c-befb-6cfce6ed0824" class="">
+</p><ul id="5035b253-e023-4829-b0ed-fe6c296adb9d" class="bulleted-list"><li style="list-style-type:disc"><strong>R$ 6.3M,</strong> incluindo comissão<ul id="9855dcd2-5d4e-4dd8-9ea7-5187a7280215" class="bulleted-list"><li style="list-style-type:circle">O lote é atualmente ocupado por edifício antigo<ul id="38017ce9-590b-4df2-8c42-8df08cdec79a" class="bulleted-list"><li style="list-style-type:square">de 3 pavimentos (térreo + 2)</li></ul><ul id="ba2869f2-9c02-405f-b457-0a7cbde9be25" class="bulleted-list"><li style="list-style-type:square">6 apartamentos no total</li></ul><ul id="b29b24ae-de9f-464e-a45e-12675bc61c99" class="bulleted-list"><li style="list-style-type:square">Não tem subsolo</li></ul></li></ul><ul id="1cf1425a-6d4a-44b2-89b4-98ce4a7538ce" class="bulleted-list"><li style="list-style-type:circle"><strong>Inicialmente, os proprietários começaram estudando permuta no local</strong></li></ul><ul id="c0e13009-f21b-4777-8b07-a7263915a491" class="bulleted-list"><li style="list-style-type:circle">Após receberem algumas propostas envolvendo permuta, os proprietários chegaram à conclusão que preferem vender no dinheiro, comprar outro apartamento usado de ~ R$ 700k e ficar com um pouco de dinheiro</li></ul><p id="7630a2d6-4f28-4209-9801-32ed2395ffb8" class="">
+</p></li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="be984a76-41f3-4e6a-ac23-87a05bef13ed"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">O terreno está num preço extremamente competitivo, de <strong>R$ 10.500/m2</strong></div></figure><p id="95c0dc0b-fdb9-41eb-8c48-29c0e2791858" class="">
+</p><blockquote id="271ffd34-538a-4ac1-bfb3-3290a3f4e7ac" class="">A última negociação de prédio antigo na Savassi adquirido 100% em dinheiro foi na <strong>Rua Fernandes Tourinho 408</strong>, onde a <strong>Patrimar</strong> pagou um valor total de <strong>R$ 9.63M</strong> em <strong>9 unidades</strong> em terreno de <strong>468m2</strong> → <mark class="highlight-red"><strong>R$ 20.586/m2</strong></mark></blockquote><p id="6f52bd32-f45f-4397-afb7-afc63bedfda3" class="">
+</p><figure id="78505dbb-452e-48f6-9aeb-a60307a29e86" class="image"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled%201.png"><img style="width:708.9772338867188px" src="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled%201.png"/></a></figure><figure id="ec06f781-7d38-4406-8388-951f0fcfe65b" class="image"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled%202.png"><img style="width:874px" src="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled%202.png"/></a></figure><p id="52168fd0-3521-44db-b947-321e8cf0b042" class="">      Fonte: Divulgação mensal dos ITBIs pela Prefeitura de Belo Horizonte, <a href="https://dados.pbh.gov.br/dataset/relatorio-itbi">disponível neste link</a></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📊 Viabilidade Econômica</summary><div class="indented"><p id="c03f8953-85d9-452e-a4d6-1929e04554f7" class="">
+</p><p id="b938bf72-3521-414c-88b7-fdc1726453f6" class="block-color-teal_background"><a href="https://docs.google.com/spreadsheets/d/1w80Aw0tCmIA39j4xR04oFjpHu4Z2l8SoOfhdCE-7wBQ/export?format=xlsx">👉 Clique aqui para baixar a planilha</a></p><p id="caa9f6fa-2ae0-4c99-bf2e-e1d4e9b48ff5" class="">
+</p><figure id="237bf3d0-4464-4339-8869-487068c0c1b8" class="image"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled%203.png"><img style="width:701px" src="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/Untitled%203.png"/></a></figure><p id="1eab7b2f-02b1-4a45-bcd7-dec12c688949" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⚖️ Situação Jurídica</summary><div class="indented"><p id="dd4570dc-ab37-4d67-9287-6dc445ff76b0" class="">
+</p><ul id="657443f7-57f9-4976-b328-397a2773439d" class="bulleted-list"><li style="list-style-type:disc">✅ 4 apartamentos com matrícula regular</li></ul><ul id="177a9917-31fc-44ba-ac92-e4217d08f50c" class="bulleted-list"><li style="list-style-type:disc">🚧 2 apartamentos em inventário</li></ul><p id="5904e2b6-9273-46d8-bcd7-b4b738853d5c" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔎 <a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Pesquisa%20de%20Mercado%20c78d0377a7714c9eb998866643756533.html">Pesquisa de Mercado</a></summary><div class="indented"><p id="30efd4e9-3038-4b7f-8af6-c9411802a034" class="">
+</p><p id="530ab7fd-ae89-4582-8da4-46968bd2c772" class="block-color-teal_background"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Pesquisa%20de%20Mercado%20c78d0377a7714c9eb998866643756533.html">👉 Clique aqui </a></p><p id="cbcf1f95-fdf8-4a73-8a19-33fad3079cbf" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏡 <a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Demanda%20por%20Apartamentos%202475c03839dd455c8df1400e555c84f8.html">Demanda por Apartamentos</a></summary><div class="indented"><p id="331e4ccb-ea17-4c18-bd23-78b8a2e9adcb" class="">
+</p><p id="db93154f-76bc-4f7d-8615-477a4e64c9ac" class="block-color-teal_background"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Demanda%20por%20Apartamentos%202475c03839dd455c8df1400e555c84f8.html">👉 Clique aqui</a></p><p id="83c0d5ca-8641-404d-91b7-ea5746721b0b" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">➕ Possibilidades de Expansão</summary><div class="indented"><p id="fdf8954f-c6d1-4212-937c-ed902d973433" class="">
+</p><ul id="459d6f4e-b660-452a-b82a-3ec0afed3fa5" class="bulleted-list"><li style="list-style-type:disc">❌ <strong>Não há possibilidades de  expansão do terreno</strong>, uma vez que os imóveis adjacentes já estão consolidados<ul id="1d0ef2f4-50b0-413c-8ff4-9de67c0878fa" class="bulleted-list"><li style="list-style-type:circle">Vizinho à direita: Prime Savassi, 55 salas em 17 pavimentos, entregue pela Ferreira Miranda em 2015</li></ul><ul id="26764c23-5b08-4581-b281-0bd9369644c2" class="bulleted-list"><li style="list-style-type:circle">Vizinho à esquerda: Residencial Montenapoleone, 25 apartamentos em 13 pavimentos, obra entregue em 2009</li></ul><ul id="e4deda3e-ee1e-48e9-a5fe-adeeb1447650" class="bulleted-list"><li style="list-style-type:circle">Vizinho nos fundos: Edifício Elias Aun, com 104 unidades de 2 quartos (64m2) e 3 quartos (73m2) em 19 pavimentos, entregue pela Garcia Construções em 2019</li></ul><p id="f409f2c4-00aa-4a53-9b2c-326ad11d3369" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📞 Contato</summary><div class="indented"><p id="47b046c2-7144-4871-9f6e-f6b5c918542f" class="">
+</p><p id="a4a4ec1f-1cec-44eb-84c6-c9e7354d3c90" class=""><strong>Athos Bernardes</strong></p><ul id="9f12a725-ddef-49b1-ad46-47b4b4b86004" class="bulleted-list"><li style="list-style-type:disc">CRECI-MG 55.358</li></ul><ul id="82a534f8-3594-4a53-8313-d7e7a279273b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20terreno%20na%20Rua%20Haiti%2064%2C%20Sion">(31) 98859-8058</a></li></ul><p id="d724dad2-7c2d-420b-ad69-4984d6455aae" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>🔀 Outros Terrenos</strong></summary><div class="indented"><p id="c50fab08-a53f-4cab-b7e7-4c7e25ae9242" class="">
+</p><p id="2a31553a-a514-4a7a-8d89-5bcb1886957f" class="block-color-teal_background"><a href="../Terrenos%20em%20Oferta%2096462f4abab540b68793cd2907ff54d5.html">👉 Conheça nossas outras opções em BH</a></p><p id="cb9117dc-0541-41eb-86eb-efcc49ca68db" class="">
+</p></div></details><p id="1fa58157-01c8-4bac-ae6f-b0061a2c84d1" class="">
+</p><div id="5ffa75b6-7a11-4cc0-b61a-b0152f01df37" class="collection-content"><h4 class="collection-title">MATERIAL DE REFERÊNCIA</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="fa5eea6b-bf4e-4814-8cf6-69c91a44b473"><td class="cell-title"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%20fa5eea6bbf4e48148cf669c91a44b473.html"><span class="icon">🏛️</span>Estudo de Viabilidade Arquitetônica</a></td></tr><tr id="c78d0377-a771-4c9e-b998-866643756533"><td class="cell-title"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Pesquisa%20de%20Mercado%20c78d0377a7714c9eb998866643756533.html"><span class="icon">🤓</span>Pesquisa de Mercado</a></td></tr><tr id="2475c038-39dd-455c-8df1-400e555c84f8"><td class="cell-title"><a href="Ouro%20Preto%20-%201%20800m2%209b3ce903609e4885a071c0472beb855f/MATERIAL%20DE%20REFERE%CC%82NCIA%205ffa75b67a114cc0b61ab0152f01df37/Demanda%20por%20Apartamentos%202475c03839dd455c8df1400e555c84f8.html"><span class="icon">🏠</span>Demanda por Apartamentos</a></td></tr></tbody></table><br/><br/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

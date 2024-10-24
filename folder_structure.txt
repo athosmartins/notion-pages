@@ -1,0 +1,231 @@
+.
+./.DS_Store
+./Icon
+./batista_de_figueiredo
+./batista_de_figueiredo/index.html
+./batista_de_figueiredo/.DS_Store
+./batista_de_figueiredo/Icon
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/Untitled 1.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777.csv
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/.DS_Store
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/Icon
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e.html
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/.DS_Store
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Icon
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814/Untitled 1.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814/Untitled 3.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814/Untitled 2.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814/Icon
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814/Untitled.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c/Untitled 1.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c/Untitled 3.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c/Untitled 2.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c/Icon
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c/Untitled 4.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c/Untitled.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Demanda por Apartamentos c24015667af64d4a87c46c55b47bb58c.html
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A94_-_Perspectiva_Esquemtica_01.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/Icon
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A103_-_Pav-_03_-_Aptos-_Tipo_e_Garden.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A104_-_Pav-_04_ao_12_-_Tipo.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A107_-_Corte_Esquemtico.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A102_-_Pav-_02_-_Estacionamento.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A106_-_Pav-_13_-_Cobertura_-_Nvel_02.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/image 1.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/image.png
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Estudo de Viabilidade Arquitetônica 6aa1046552f243f0a0b6b2ebc236e87e/0_-_Sheet_-_A101_-_Pavimento_Trreo.jpg
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/MATERIAL DE REFERÊNCIA 91100d07378e47e585ce6eeb80858777/Pesquisa de Mercado f0c34db014f54f278e552b4c74674814.html
+./batista_de_figueiredo/Batista de Figueiredo - 1 080m2 f3a21328e1014e0dacbf44c8f48ac4b7/Untitled.png
+./folder_structure.txt
+./.git
+./.git/Icon
+./.git/config
+./.git/objects
+./.git/objects/0d
+./.git/objects/0d/Icon
+./.git/objects/0d/8b8a0b0115cafc3db0aa5103e15b219e337a5c
+./.git/objects/95
+./.git/objects/95/Icon
+./.git/objects/95/e6d0bdb5f2803473024c86031a7ae19413621f
+./.git/objects/0c
+./.git/objects/0c/Icon
+./.git/objects/0c/66254730b61d2f580f760278ccfb837926ac49
+./.git/objects/50
+./.git/objects/50/Icon
+./.git/objects/50/f44310fe55d0e8bea7a61843c0da13807a3194
+./.git/objects/50/6155806cd284bc45097a92c88b71c551bc0093
+./.git/objects/9e
+./.git/objects/9e/Icon
+./.git/objects/9e/80729cf21d458c81f5ab43e33126c8b83044be
+./.git/objects/35
+./.git/objects/35/Icon
+./.git/objects/35/b86d3327f39b0fa142abaa9f205698064e3970
+./.git/objects/5f
+./.git/objects/5f/Icon
+./.git/objects/5f/d0eec637713861f2d830ed60643428fc61f972
+./.git/objects/5f/2ea723364ba3afd535030f3d8b0a996c9e4c85
+./.git/objects/b5
+./.git/objects/b5/Icon
+./.git/objects/b5/0fe1f4fab9e0fba78cad0715a3ef814f10bc93
+./.git/objects/ad
+./.git/objects/ad/99d7241aa6642d4cba5c7b9b859de2f0e92d9c
+./.git/objects/ad/Icon
+./.git/objects/bb
+./.git/objects/bb/Icon
+./.git/objects/bb/95d82ac5e12d4b13e2c00936f8d74b1aef5995
+./.git/objects/Icon
+./.git/objects/bd
+./.git/objects/bd/Icon
+./.git/objects/bd/050707b2ec9cf116b5d177205286784462e6fd
+./.git/objects/e5
+./.git/objects/e5/Icon
+./.git/objects/e5/c4510888e1e6f235b2c6e5238c6cf7f71d7273
+./.git/objects/f4
+./.git/objects/f4/7922a2ceb83d501d89eec355aea88655ea263d
+./.git/objects/f4/Icon
+./.git/objects/f2
+./.git/objects/f2/Icon
+./.git/objects/f2/ab9be1240e43c9503726007693d7be75433693
+./.git/objects/e3
+./.git/objects/e3/01fbcf48ae3ee74ae7270d2c9b09824bbdcb5d
+./.git/objects/e3/Icon
+./.git/objects/e4
+./.git/objects/e4/Icon
+./.git/objects/e4/6d392973688be79270740bc0cd68688d92a446
+./.git/objects/ed
+./.git/objects/ed/Icon
+./.git/objects/ed/1029e5269098d83dab22a3206e33037fa36a40
+./.git/objects/20
+./.git/objects/20/Icon
+./.git/objects/20/2163f4b3c9e37088c4295cd65905657630a0bc
+./.git/objects/18
+./.git/objects/18/Icon
+./.git/objects/18/48931d9773e85314dc4c2577ca9e174a78c86c
+./.git/objects/4b
+./.git/objects/4b/b50283065424b463e8190af414108ce7fed633
+./.git/objects/4b/Icon
+./.git/objects/4b/111474cf51e447882a97ae456f7194b1a994fd
+./.git/objects/pack
+./.git/objects/pack/Icon
+./.git/objects/29
+./.git/objects/29/Icon
+./.git/objects/29/c5993583528cbe019cc4f0fd3d05d1c32a517e
+./.git/objects/73
+./.git/objects/73/Icon
+./.git/objects/73/5cc14131f22ebc54f9b4f23aa01797f2fda4ba
+./.git/objects/10
+./.git/objects/10/Icon
+./.git/objects/10/2047a43e22b84282cdd3d58806309a6f320302
+./.git/objects/9f
+./.git/objects/9f/Icon
+./.git/objects/9f/1e5625c4be4604e66f2ef9e9fe0eb9288de81a
+./.git/objects/07
+./.git/objects/07/Icon
+./.git/objects/07/b8af7c8cdaf52ac706fe6d238d333173b23ef5
+./.git/objects/38
+./.git/objects/38/1d22c874f1fa4f801c3adebc519fa9b29a56a1
+./.git/objects/38/Icon
+./.git/objects/5c
+./.git/objects/5c/Icon
+./.git/objects/5c/9e20ce85130179a42fe19dc73450d953d4d38e
+./.git/objects/info
+./.git/objects/info/Icon
+./.git/objects/98
+./.git/objects/98/Icon
+./.git/objects/98/5e3a6471d38f65460818393ee2c6212b13f090
+./.git/objects/01
+./.git/objects/01/Icon
+./.git/objects/01/1c09649e1419a431acf66f1661987017bcb55b
+./.git/objects/55
+./.git/objects/55/Icon
+./.git/objects/55/141cb8a1110f82481a1cf58024500eb6993057
+./.git/objects/b9
+./.git/objects/b9/Icon
+./.git/objects/b9/354ad81004f312427d77c0ee7af5a4caff3e29
+./.git/objects/ea
+./.git/objects/ea/Icon
+./.git/objects/ea/46f8837314e6170ca73cdc501c175ca8212fc6
+./.git/objects/e6
+./.git/objects/e6/Icon
+./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+./.git/objects/c5
+./.git/objects/c5/Icon
+./.git/objects/c5/95fb3526505a84846c32d08cfabdb42381c37a
+./.git/objects/f1
+./.git/objects/f1/Icon
+./.git/objects/f1/fa94aef18316737146120af54d3ac0b287d031
+./.git/objects/f8
+./.git/objects/f8/Icon
+./.git/objects/f8/2c6f56f9086de57e6a57fb5490bc04e13a53d6
+./.git/objects/f8/57aef3d6a5f8f684a95e01256d01b522fb706f
+./.git/objects/ce
+./.git/objects/ce/Icon
+./.git/objects/ce/bef4c7ae679652dfd5543dc614ad48741ec38e
+./.git/objects/8d
+./.git/objects/8d/Icon
+./.git/objects/8d/5f0793ea03c460f758c9e0337cf8490a8c37b2
+./.git/objects/1d
+./.git/objects/1d/Icon
+./.git/objects/1d/ff66995cc49671e24964febcc4de8dde4e3657
+./.git/objects/47
+./.git/objects/47/83d85994c6e53a7dfb2d46f9208472aee175a3
+./.git/objects/47/Icon
+./.git/objects/13
+./.git/objects/13/Icon
+./.git/objects/13/e54d9b26c1440f31bf0f058189f35f625ce20c
+./.git/objects/7a
+./.git/objects/7a/Icon
+./.git/objects/7a/97090fbf0edd950e8bb688e918e8244832022d
+./.git/HEAD
+./.git/info
+./.git/info/Icon
+./.git/info/exclude
+./.git/logs
+./.git/logs/Icon
+./.git/logs/HEAD
+./.git/logs/refs
+./.git/logs/refs/Icon
+./.git/logs/refs/heads
+./.git/logs/refs/heads/Icon
+./.git/logs/refs/heads/main
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/Icon
+./.git/logs/refs/remotes/origin
+./.git/logs/refs/remotes/origin/Icon
+./.git/logs/refs/remotes/origin/main
+./.git/description
+./.git/hooks
+./.git/hooks/commit-msg.sample
+./.git/hooks/Icon
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/update.sample
+./.git/hooks/push-to-checkout.sample
+./.git/refs
+./.git/refs/Icon
+./.git/refs/heads
+./.git/refs/heads/Icon
+./.git/refs/heads/main
+./.git/refs/tags
+./.git/refs/tags/Icon
+./.git/refs/remotes
+./.git/refs/remotes/Icon
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/Icon
+./.git/refs/remotes/origin/main
+./.git/index
+./.git/COMMIT_EDITMSG
+./.git/FETCH_HEAD

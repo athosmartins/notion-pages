@@ -1,0 +1,717 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Pesquisa de Mercado</title><style>
+<link rel="stylesheet" href="/style.css">
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="429e7e3e-744a-4a28-91d2-4f7b485aef29" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🤓</span></div><h1 class="page-title">Pesquisa de Mercado</h1><p class="page-description"></p><table class="properties"><tbody></tbody></table></header><div class="page-body"><details ><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">LANÇAMENTOS</summary><div class="indented"><h3 id="b8e2e3ff-ba40-4c52-b670-d70ec7cea2b7" class=""><strong><a href="https://app.hex.tech/454294a5-d804-4204-a34a-27c50defab3e/app/16981c9d-d985-4039-8617-5ecce618bfc0/latest">Clique aqui para poder movimentar o mapa e ver as legendas</a></strong><strong> (ideal abrir no computador)</strong></h3><p id="32eb74cc-9ffc-4c1b-97b0-209138b461f3" class="">
+</p><figure id="4a12a7d8-ec43-4257-87cb-be327e0b687f" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled.png"><img style="width:1128px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled.png"/></a></figure><figure id="17712c14-5950-4b49-9202-65eaf0b386db" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%201.png"><img style="width:1091px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%201.png"/></a></figure><figure id="f6353844-c0db-4341-bdb7-c559c2de9d9d" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%202.png"><img style="width:1683px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%202.png"/></a></figure><p id="d00ccf7f-418d-4850-aab9-846be6fe698a" class="">Abaixo, alguns empreendimentos dos quais não fazemos mapeamento sistemático - <strong>portanto não temos tabela completa, não sabemos nível de estoque e nem conhecemos velocidade de vendas </strong>- mas que podem ajudar: </p><p id="6fd8d3ab-45be-423a-95b1-3f6aa0703423" class="">
+</p><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Opus Residence - Sol Edificações</summary><div class="indented"><ul id="649fdcc5-a7aa-476a-83fc-45bc5ac2dbce" class="bulleted-list"><li style="list-style-type:disc">Rua Patagônia 433 → trata-se do empreendimento mais próximo do lote em oferta, a apenas 170m de distância </li></ul><ul id="a0b2a3b1-ccfb-44a3-bb3a-34127ade2cc5" class="bulleted-list"><li style="list-style-type:disc">95m2 → 3 quartos com suíte e 2 vagas</li></ul><figure id="16a8ea5d-58f8-438e-9fa3-87b8b686d677" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%203.png"><img style="width:800px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%203.png"/></a></figure><ul id="132d9725-fe99-4b16-91d1-c96fad931641" class="bulleted-list"><li style="list-style-type:disc">R$ 1.378M → <strong>R$ 14.5k/m2</strong></li></ul><figure id="87827f18-3e32-4559-becf-59ee636bbcd8"><a href="https://www.vivareal.com.br/imovel/apartamento-3-quartos-sion-bairros-belo-horizonte-com-garagem-95m2-venda-RS1378000-id-2645534654/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apartamento na Rua Patagônia, Sion em Belo Horizonte, por R$ 1.378.000 - Viva Real</div><div class="bookmark-description">Compre Apartamento com 3 Quartos e 95 m² por R$ 1.378.000 na Rua Patagônia - Sion - Belo Horizonte - MG. Fale com BH BROKERS.</div></div><div class="bookmark-href"><img src="https://cdn1.vivareal.com/p/1-8c14db8/v/static/app/img/favicon/apple-touch-icon.png" class="icon bookmark-icon"/>https://www.vivareal.com.br/imovel/apartamento-3-quartos-sion-bairros-belo-horizonte-com-garagem-95m2-venda-RS1378000-id-2645534654/</div></div><img src="https://resizedimgs.vivareal.com/fit-in/1600x720/named.images.sp/391c34d346b56cba5e5807b038039661/image.jpg" class="bookmark-image"/></a></figure><ul id="43ae13c9-9401-49f6-a242-bf53057c6b4f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://soledificacoes.com.br/empreendimento/opus-residence/">Link do empreendimento</a></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Califórnia Carmel - DM Engenharia</summary><div class="indented"><ul id="3321971e-adc3-41fb-8318-0719970a410b" class="bulleted-list"><li style="list-style-type:disc">Rua Califórnia 380</li></ul><ul id="4dd3fad1-b159-4984-94a1-e79f3c5a83a6" class="bulleted-list"><li style="list-style-type:disc">86m2 → 3 quartos com 1 suíte, 2 semi-suítes e 2 vagas<figure id="c82acb2d-5e29-484a-ac5b-9845380537a3" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%204.png"><img style="width:957px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%204.png"/></a><figcaption>     Planta da unidade tipo</figcaption></figure></li></ul><ul id="3d4ee2c9-4a24-4420-a8a6-2aecbf8d4546" class="bulleted-list"><li style="list-style-type:disc">R$ 1.3MM → <strong>R$ 15.1k/m2</strong><figure id="c07cda10-12b9-4d01-b903-fac4f31e4835"><a href="https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-com-churrasqueira-sion-belo-horizonte-mg-86m2-id-2678138958/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apartamento com 3 Quartos à venda, 86m² - Sion</div><div class="bookmark-description">O apartamento no bairro Sion possui 86 metros quadrados com 3 quartos sendo 2 suites e 2 banheiros
+Possui área de recreação infantil, academia.Elevador para mais praticidade no dia-a-dia.
+Espaço reservado para preparar o seu churrasco.</div></div><div class="bookmark-href"><img src="https://assets.zap.com.br/assets/v5.293.3/196x196.png" class="icon bookmark-icon"/>https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-com-churrasqueira-sion-belo-horizonte-mg-86m2-id-2678138958/</div></div><img src="https://resizedimgs.zapimoveis.com.br/crop/870x653/named.images.sp/f077ae51be4331416500d4a05b9caf0f/apartamento-com-3-quartos-a-venda-86m-no-sion-belo-horizonte.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="79e5b9a8-6e79-4167-8992-387596230c6f" class="bulleted-list"><li style="list-style-type:disc">Lote de 480m2 adquirido em nov/2018 por R$ 2.3MM <strong>(4.8k/m2)</strong> - fonte: <a href="https://app.hex.tech/454294a5-d804-4204-a34a-27c50defab3e/app/e6aab2b1-2999-409a-b99b-73d1510f12c0/latest">ITBI PBH</a></li></ul><ul id="aee23db5-faa4-4898-81be-7d97ce9db99f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://dmengenharia.eng.br/">Link do site da incorporadora</a></li></ul><p id="869c243d-6f30-4b30-ad34-3aea417761b0" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Soho - Projecon</summary><div class="indented"><ul id="86e17b73-0aff-4095-b235-3dfb40363801" class="bulleted-list"><li style="list-style-type:disc">Rua Estados Unidos 132</li></ul><ul id="4b6497da-34c6-4fab-a05f-343e8788e64d" class="bulleted-list"><li style="list-style-type:disc">133m2 → 4 quartos com 2 suítes + 2 semissuítes e 3 vagas</li></ul><figure id="f9563688-6aa8-42e8-be21-d25043cf8113" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%205.png"><img style="width:1257px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%205.png"/></a><figcaption>     Unidade tipo</figcaption></figure><ul id="6644b3a7-ad56-4dde-acc3-e44da74a9bf8" class="bulleted-list"><li style="list-style-type:disc">R$ 1.879MM → <strong>R$ 14.1k/m2</strong><figure id="e15815c8-c520-49a6-80f7-67d5753e6096"><a href="https://www.zapimoveis.com.br/imovel/venda-apartamento-4-quartos-com-piscina-sion-belo-horizonte-mg-133m2-id-2574138631/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apartamento com 4 Quartos à venda, 133m² - Sion</div><div class="bookmark-description">Próximo do Colégio Santa Dorotéia, Supermecados, farmácias, empreendimento voltado para quem tem bom gosto, excelente acabamento, com 09 andares, com 12 unidades, prédio todo revestido com piscina, deck,,  SPA, Fitness, salão de festas, espaço gourmet, sauna, espaço kids, salão de jogos, espaço pets, varanda,  playgrond, mini quadra e 03 vagas de garagem.
+Apartamentos com sala 02 ambientes, lavabo, 04 quartos em laminado de madeira, sendo 02 suites e 02 semi suites, cozinha ampla, área de serviço e dce.  Todo acabamento das partes frias em porcelanato. Entrega em Julho de 2025.</div></div><div class="bookmark-href"><img src="https://assets.zap.com.br/assets/v5.293.3/196x196.png" class="icon bookmark-icon"/>https://www.zapimoveis.com.br/imovel/venda-apartamento-4-quartos-com-piscina-sion-belo-horizonte-mg-133m2-id-2574138631/</div></div><img src="https://resizedimgs.zapimoveis.com.br/crop/870x653/named.images.sp/20c94d0240dea46a07841b3b5cacbcb8/apartamento-com-4-quartos-a-venda-133m-no-sion-belo-horizonte.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="acc65c93-d580-4ff9-b03d-3dedf7739150" class="bulleted-list"><li style="list-style-type:disc"><a href="https://projeconconstrucoes.com.br/imovel/soho-residence/">Link do site da incorporadora</a></li></ul><p id="e5175ddb-70e0-4d48-ba11-89f547d6632e" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Edifício Washington - Araguaia Construtora + IPC Engenharia</summary><div class="indented"><ul id="bed9b5aa-59db-4e13-915f-2a536c98f313" class="bulleted-list"><li style="list-style-type:disc">Rua República Argentina 224</li></ul><ul id="374a9a93-8cbb-49e9-a9aa-d57251ef516e" class="bulleted-list"><li style="list-style-type:disc">226m2 (área privativa) → 3 quartos com 1, 2 semissuítes suíte e 2 vagas<figure id="518b50ce-2c99-47f1-b7f2-44f41622c184" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%206.png"><img style="width:751px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%206.png"/></a></figure></li></ul><ul id="78ba88a3-30f6-4b59-9c98-ee91da9df25d" class="bulleted-list"><li style="list-style-type:disc">Áreas privativas disponíveis por R$ 1.837MM e R$ 1.796MM<ul id="fd0881d2-cc99-432f-ac78-ee5f0b4bea75" class="bulleted-list"><li style="list-style-type:circle">As únicas unidades disponíveis são áreas privativas e não sabemos quanto da área é descoberta, portanto não faz sentido calcular o valor por m2 <figure id="b5c4c285-f347-413c-a772-1d90fa8fd70f"><a href="https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-sion-belo-horizonte-mg-226m2-id-2616666801/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apartamento com 3 Quartos à venda, 226m² - Sion</div><div class="bookmark-description">PROXIMO A AV URUGUAI, PREDIO EM CONSTRUÇAO COM ENTREGA PREVISTA PARA OUTUBRO 2023. LAZER COM SALAO DE FESTAS, ESPAÇO GOURMET E ACADEMIA APARTAMENTO EXCELENTE COM SOL DA MANHA NA SALA E SUITE, TODOS DE FRENTE PROJETO EXCEPCIONAL, ACABAMENTO ALTO PADRAO, COM 3 QUARTOS SENDO 1 SUITE, SALA COM LAVABO, COZINHA TIPO AMERICANA, LAVANDERIA, BANHO SOCIAL PISOS: PORCELANATO NA SALA E PARTES FRIAS, LAMINADO VINILICO. APARTAMENTOS COM ÁREA PRIVATIVA ANEXA.
+2 VAGAS DE GARAGEM SEPARADAS
+Preços estão sujeitos a alterações pela construtora.
+
+AP 301 226,12 m2    R$   1.837.472,06
+AP 302 196,66 m2    R$   1.796.025,33</div></div><div class="bookmark-href"><img src="https://assets.zap.com.br/assets/v5.293.3/196x196.png" class="icon bookmark-icon"/>https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-sion-belo-horizonte-mg-226m2-id-2616666801/</div></div><img src="https://resizedimgs.zapimoveis.com.br/fit-in/1600x720/named.images.sp/b51a20577ced7eddf3e38870073be5a2/image.jpg" class="bookmark-image"/></a></figure></li></ul></li></ul><ul id="02dbf8d7-5b1b-4260-a6f5-01810ff6b576" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.araguaiaipc.com.br/imoveis/edificio-washington/11">Link do site da incorporadora </a></li></ul><p id="db6e3c5d-a9bd-489a-9116-f16147ce9d51" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Assunção 385 - Becker</summary><div class="indented"><ul id="59fe591d-7702-4d8c-be39-e61a8814e4cb" class="bulleted-list"><li style="list-style-type:disc">Rua Assunção 385</li></ul><ul id="a41f6652-72bc-4623-9df1-bb41c7c0ea5d" class="bulleted-list"><li style="list-style-type:disc">99m2 → 3 quartos com 2 suítes e 2 vagas<figure id="21ade232-e145-42f5-9a1a-6859e300db75" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%207.png"><img style="width:957px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%207.png"/></a></figure></li></ul><ul id="c9a0548c-710e-4d77-9c1e-a719a77291a1" class="bulleted-list"><li style="list-style-type:disc">R$ 1.288MM → <strong>R$ 13k/m2</strong><figure id="8e38ba2f-3ee3-47cf-ad30-39635db87316"><a href="https://www.zapimoveis.com.br/lancamento/venda-apartamento-3-quartos-sion-belo-horizonte-mg-99m2-id-2695719748/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Assunção 385 || 99m² - Sion</div><div class="bookmark-description">Edifício Assunção 385: Apartamento Garden de 180,5m² - 3 quartos, com suíte e semi-suíte,  closet,  cozinha integrada à sala para dois ambientes e amplo terraço gourmet com churrasqueira e deck com spa.
+
+Empreendimento em construção no bairro Sion. Unidades com 3 quartos, sendo 1 suíte com closet e 1 semi-suíte. Sala para 2 ambientes com piso em porcelanato, varanda gourmet com churrasqueira, área de serviço, 2 vagas. Terraço Gourmet com churrasqueira e deck com spa. O Assunção 385 terá fachada revestida com porcelanato e cerâmica, além de infraestrutura para CFTV.
+
+Localizado na Rua Assunção, no bairro Sion, o Edifício Assunção 385 possui fácil acesso à Avenida Nossa Senhora do Carmo e Avenida Uruguai.  O seu novo lar fica a poucos quarteirões de supermercados, hortifrútis, academias, confeitaria, escolas, petshops e todas as facilidades que tornam a sua vida mais completa. Além de contar com toda essa praticidade, você estará em um dos pontos mais tranquilos do Sion e ao lado da natureza do Parque Mata das Borboletas.
+
+DIRETO COM A CONSTRUTORA - Preços e informações poderão sofrer mudanças sem aviso prévio. Por este motivo, solicitamos confirmação com nossos consultores. Temos disponível cobertura duplex e apartamento tipo</div></div><div class="bookmark-href"><img src="https://assets.zap.com.br/assets/v5.293.3/196x196.png" class="icon bookmark-icon"/>https://www.zapimoveis.com.br/lancamento/venda-apartamento-3-quartos-sion-belo-horizonte-mg-99m2-id-2695719748/</div></div><img src="https://resizedimgs.zapimoveis.com.br/fit-in/1600x720/named.images.sp/dc728a7c60a3c1c579b3ff5d6e827d2e/image.jpg" class="bookmark-image"/></a></figure></li></ul><ul id="fc0f3c3f-2e88-4b94-88fb-c97727f7709f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://becker.com.br/empreendimentos/assuncao-385">Link do site da incorporadora</a></li></ul><p id="52cba998-aa79-4a93-becc-6cfcb8a218f8" class="">
+</p><p id="49b2dd44-989b-40cc-9b2f-e9edddc46363" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Edifício Parque Jk - Incorporadora não identificada</summary><div class="indented"><ul id="acabb286-c1ae-4d45-87cf-714896ac4837" class="bulleted-list"><li style="list-style-type:disc">Rua Engenheiro Caetano Lopes 140 (Praça JK)</li></ul><ul id="5507e90c-568b-42f1-83cc-95420b178d6b" class="bulleted-list"><li style="list-style-type:disc">96m2 → 3 quartos com 1 suíte e 2 vagas </li></ul><figure id="9e0b4391-f4a7-4469-9964-a9d9fea22833" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%208.png"><img style="width:870px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%208.png"/></a></figure><ul id="54cf3d92-81cf-42df-b0db-63e7b6835f57" class="bulleted-list"><li style="list-style-type:disc">R$ 1.59MM → <strong>R$ 16.5k/m2</strong></li></ul><figure id="e5e369f7-5faf-45a8-a602-caf6b6e41631"><a href="https://www.vivareal.com.br/imovel/apartamento-3-quartos-sion-bairros-belo-horizonte-com-garagem-100m2-venda-RS1590000-id-2645016468/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apartamento na Rua Cristina, 140, Sion em Belo Horizonte, por R$ 1.590.000 - Viva Real</div><div class="bookmark-description">Compre Apartamento com 3 Quartos e 100 m² por R$ 1.590.000 na Rua Cristina, 140 - Sion - Belo Horizonte - MG. Fale com JOSÉ SILVIO DE ANDRADE FILHO.</div></div><div class="bookmark-href"><img src="https://cdn1.vivareal.com/p/1-8c14db8/v/static/app/img/favicon/apple-touch-icon.png" class="icon bookmark-icon"/>https://www.vivareal.com.br/imovel/apartamento-3-quartos-sion-bairros-belo-horizonte-com-garagem-100m2-venda-RS1590000-id-2645016468/</div></div><img src="https://resizedimgs.vivareal.com/fit-in/1600x720/named.images.sp/22fade260d0abe70d694fddd2fbc75c4/image.jpg" class="bookmark-image"/></a></figure></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Não Identificado</summary><div class="indented"><ul id="adbf589b-cab3-4efb-bb11-d1039d670fd0" class="bulleted-list"><li style="list-style-type:disc">Rua Outono, número não identificado</li></ul><ul id="327aea8c-a680-4399-a7ab-946a2e75c10e" class="bulleted-list"><li style="list-style-type:disc">94 m2 → 3 quartos com 1 suíte + 2 semissuítes, 2 vagas </li></ul><figure id="5a4f2952-19b4-4ecd-85b6-c6ebc6f16831" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%209.png"><img style="width:378px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%209.png"/></a></figure><ul id="1844099c-68cb-4897-a97f-3cbf0de49ba7" class="bulleted-list"><li style="list-style-type:disc">R$ 1.5MM → <strong>R$ 16k/m2</strong><figure id="ebfb1461-577f-4fe0-97a0-7cd8c925be7d"><a href="https://www.vivareal.com.br/imovel/apartamento-3-quartos-sion-bairros-belo-horizonte-com-garagem-94m2-venda-RS1511360-id-2656513103/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Apartamento na Rua Outono, Sion em Belo Horizonte, por R$ 1.511.360 - Viva Real</div><div class="bookmark-description">Compre Apartamento com 3 Quartos e 94 m² por R$ 1.511.360 na Rua Outono - Sion - Belo Horizonte - MG. Fale com GN IMOVEIS.</div></div><div class="bookmark-href"><img src="https://cdn1.vivareal.com/p/1-8c14db8/v/static/app/img/favicon/apple-touch-icon.png" class="icon bookmark-icon"/>https://www.vivareal.com.br/imovel/apartamento-3-quartos-sion-bairros-belo-horizonte-com-garagem-94m2-venda-RS1511360-id-2656513103/</div></div><img src="https://resizedimgs.vivareal.com/fit-in/1600x720/named.images.sp/abbb427cd36febc0223211b09e6019fc/image.jpg" class="bookmark-image"/></a></figure></li></ul><p id="61b6c818-d9ac-4953-87c3-97313711cd35" class="">
+</p></div></details><p id="c0d70988-64c5-4fe4-8e45-262eb41ed85a" class="">
+</p><p id="55f3c31f-ec6c-4b61-ad31-1dadfe717299" class="">
+</p><p id="ec5d2c25-7a39-4672-ac24-7756c35a23b5" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">AVULSOS</summary><div class="indented"><p id="dc1fb969-56f9-4c22-b73e-582a5e306a08" class=""><mark class="highlight-teal_background"><span style="border-bottom:0.05em solid"><strong><a href="Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%203c2bfcd7904b4841bee5161b1ff512bf.html">Clique aqui para ter acesso à pesquisa interativa completa, com mapa de ofertas e link de todas unidades pesquisadas</a></strong></span></mark><mark class="highlight-teal_background"><span style="border-bottom:0.05em solid"><strong> (ideal abrir no computador)</strong></span></mark></p><p id="f7d62579-84c0-4dd3-9d67-5bb0845ae6a5" class="">
+</p><p id="6b4e111e-ff0b-407b-9ade-1a8514227c04" class="">Universo pesquisado: </p><ul id="1aa51a44-3823-4585-8d7f-b4ba2069a2e4" class="bulleted-list"><li style="list-style-type:disc">Apartamentos no <strong>Sion</strong> anunciados para venda no <strong>Viva Real</strong> em <strong>7</strong>/<strong>mar</strong>/<strong>24</strong></li></ul><ul id="750e0dc3-5257-4405-ac78-588f99a91280" class="bulleted-list"><li style="list-style-type:disc">Apartamentos <strong>tipo</strong> </li></ul><ul id="5303f86f-9ced-4a36-a069-8adfb7bcbcb3" class="bulleted-list"><li style="list-style-type:disc">Aúncios com <strong>menos de 180 dias</strong> </li></ul><ul id="a51402cb-fcb7-4e28-ae39-8e8d0ef5f71d" class="bulleted-list"><li style="list-style-type:disc">Empreendimentos cujas <strong>obras já foram entregues</strong></li></ul><ul id="a3980b2d-39aa-4766-bedc-547d355cc239" class="bulleted-list"><li style="list-style-type:disc">Anúncios <strong>duplicados foram removidos </strong></li></ul><p id="c226657f-9fad-4f0e-8e73-77edb061b655" class="">
+</p><p id="68d70688-fc44-4b74-bd09-4a14e7507081" class=""><strong>Universo total = 182 apartamentos</strong></p><figure id="a8260ffb-aa96-475a-9f0a-ed5132fe5048" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%2010.png"><img style="width:1416px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%2010.png"/></a></figure><p id="0900f0dd-b3af-45e8-bba9-9f0ed32a1c29" class="">
+</p><p id="94b898e9-4bb2-494e-b82b-b9fc37469abe" class="">
+</p><p id="96b746a9-4d27-4954-8de2-1b0c0c577d57" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">PESQUISA DE ITBI</summary><div class="indented"><ul id="4a9f4f68-1b40-46f3-9d15-04d11ab88665" class="bulleted-list"><li style="list-style-type:disc">A Prefeitura de Belo Horizonte divulga mensalmente planilhas com todos os ITBIs pagos no mês</li></ul><ul id="edb013a5-065e-4d5d-b134-25600c8c927b" class="bulleted-list"><li style="list-style-type:disc">Compilamos esta base para ajudar o incorporador a entender como está se comportando o mercado no bairro em estudo</li></ul><ul id="3395b968-322f-4bd9-a9c6-d475fc5ca703" class="bulleted-list"><li style="list-style-type:disc"><strong>Não conseguimos, ainda, inferir R$/m2 de venda a partir desta base, porque as áreas lançadas são as de IPTU, ou seja, incluem áreas comuns</strong></li></ul><ul id="2cd83801-8f23-45d9-8f8f-dc5387e79d7d" class="bulleted-list"><li style="list-style-type:disc">No entanto, é possível entender o ticket médio das unidades vendidas no bairro</li></ul><ul id="fdc48972-0c0c-4fde-b96e-4666f6ac4d36" class="bulleted-list"><li style="list-style-type:disc">Filtrando apenas vendas concretizadas de 2020 em diante, para prédios entregues de 2014 em diante, o histograma de vendas mostra bastante apetite no bairro para unidades de 600k a R$1.1M</li></ul><figure id="d4b6e2f9-5302-428f-ae1e-3554d53e3503" class="image"><a href="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%2011.png"><img style="width:1235px" src="Pesquisa%20de%20Mercado%20429e7e3e744a4a2891d24f7b485aef29/Untitled%2011.png"/></a></figure><p id="b07b31fa-2578-4e07-a993-e8cc14a3b19d" class="">
+</p></div></details><p id="2d55dee1-9d43-4df0-8ccf-db801b0ed99b" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

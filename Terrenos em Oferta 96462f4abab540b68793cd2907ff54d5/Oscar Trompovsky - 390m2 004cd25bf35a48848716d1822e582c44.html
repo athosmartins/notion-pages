@@ -1,0 +1,709 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Oscar Trompovsky - 390m2</title><style>
+<link rel="stylesheet" href="/style.css">
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="004cd25b-f35a-4884-8716-d1822e582c44" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">1️⃣</span></div><h1 class="page-title">Oscar Trompovsky - 390m2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="c38400b3-b096-4ee6-a765-ab9032c73992" class="">Gutierrez</h1><p id="b96f3d2c-613d-403a-8bcc-8c9d1b8bbb45" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="30fa7974-c6d5-4de2-9d62-ffe906bb2671"><div style="font-size:1.5em"><span class="icon">🖼️</span></div><div style="width:100%"><strong>390m2</strong> com coeficiente de aproveitamento = 1.5</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="49d0bb6d-72c9-45aa-b1f5-b64bcf2fb668"><div style="font-size:1.5em"><span class="icon">🚀</span></div><div style="width:100%">VGV =<strong> R$ 9.3M</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="50b64e2d-9d48-48d5-8ce7-6cd2eb489858"><div style="font-size:1.5em"><span class="icon">💰</span></div><div style="width:100%">Valor de oferta do lote:<strong> </strong>R$ 1.6M <strong>(R$ 4.1k/m2)</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="64052430-9a3c-48e8-b758-43407bf618b4"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%"><strong>Estuda permuta no local como parte do pagamento</strong></div></figure><p id="32c0d31e-14ec-409e-a00e-96bb2271bd79" class="">
+</p><p id="560001a0-f5ba-49a9-b5cd-24c79229c293" class=""><em><mark class="highlight-gray">👇 Clique nas setas para expandir </mark></em></p><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📍 Localização</summary><div class="indented"><p id="3697842b-d285-4634-90fa-a9f136c482af" class="">
+</p><p id="42d6bd40-b73a-42e8-b66b-5ca134fce62d" class=""><strong>Rua Oscar Trompovsky 618 - Gutierrez</strong></p><p id="1877eb00-6071-490e-a341-0d8b12a1aa5b" class=""><div class="indented"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5410ef73-edb4-43e6-9d0b-fb954850bdd8"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Ponto incrível no Gutierrez, a apenas:<br/>- <br/><strong>2 quarteirões do Origem (Terrazzas - R$ 19k/m2)<br/>- 3 quarteirões do Villaggio (Patrimar - 28 pavimentos, entregue em 2017)<br/>- 4 quarteirões do Gran Maggiore (Conartes - 22 pavimentos, entregue em 2018)             <br/></strong></div></figure></div></p><p id="5a3d85e9-d51e-4b9b-9a0c-ffce9ab91b7a" class="">
+</p><p id="8dd744c7-26eb-4378-84f7-6019b7c70162" class="">Link Google Maps: <a href="https://maps.app.goo.gl/rPPp3E9zEiZGxjaB8">👉 clique aqui</a> </p><p id="6fbe79b4-2b4b-4ac9-8b03-75abb1fabe79" class="">
+</p><figure id="78f392fd-776b-44eb-904f-a6bf245f6849" class="image"><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/preto_e_branco.jpeg"><img style="width:1280px" src="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/preto_e_branco.jpeg"/></a></figure><p id="4a6cf363-7c54-441a-982b-07a66785188b" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📐 Dimensões e Zoneamento</summary><div class="indented"><p id="7b665f9a-f018-40cc-b063-7025569043fa" class="">
+</p><ul id="8d5d012c-a84b-44b2-92ac-99ce8263a1e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Zona Fiscal:</strong> 103</li></ul><ul id="c670f7ee-7bab-45ef-8b5e-f53f292fc30d" class="bulleted-list"><li style="list-style-type:disc"><strong>Quadra: </strong>031</li></ul><ul id="05aa75cd-435e-4f62-a757-6143219739c8" class="bulleted-list"><li style="list-style-type:disc"><strong>Lotes:</strong> 005</li></ul><ul id="0855d92c-0b23-4733-a699-06e99e2453a4" class="bulleted-list"><li style="list-style-type:disc"><strong>Área Total:</strong> 390m²<ul id="08c7e892-73f2-4faf-9bb6-9d168c440702" class="bulleted-list"><li style="list-style-type:circle"><strong>Frente: </strong>15m </li></ul><ul id="71fb2256-901a-4377-87cf-4d0e83b4d052" class="bulleted-list"><li style="list-style-type:circle"><strong>Fundos: </strong>16m</li></ul></li></ul><ul id="c090efd0-573e-4e96-a523-a8421bd84ff8" class="bulleted-list"><li style="list-style-type:disc"><strong>Zoneamento:</strong> OM-3<ul id="de7fbbe6-69f5-4fc8-9248-11c49f264573" class="bulleted-list"><li style="list-style-type:circle"><strong>CA Máx: </strong>1.5</li></ul><ul id="96bb32b2-bad4-4277-8930-49014fbb96b6" class="bulleted-list"><li style="list-style-type:circle"><strong>Cota de terreno por unidade: </strong>40<ul id="aa090bb3-ecb0-4dc9-b8f1-8dbb581a814d" class="bulleted-list"><li style="list-style-type:square">Número máximo de unidades: 10</li></ul></li></ul><ul id="fbeb7e72-c29c-40b4-884d-d343f40583ee" class="bulleted-list"><li style="list-style-type:circle"><strong>Área Permeável Mínima:</strong> 20%</li></ul><ul id="3d28f883-1418-4edb-9873-1f7a88c7ed1f" class="bulleted-list"><li style="list-style-type:circle"><strong>✅ Não existem outras restrições como altimetria ou previsão de alargamento de via</strong></li></ul><p id="69024227-5310-424e-9b80-39a424d5f49f" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⬇️ Informação Básica</summary><div class="indented"><p id="b303dc7b-61a0-45df-b59f-0eb89801625e" class=""><div class="indented"><p id="3f9610d7-ce23-4197-88ce-076d529f1546" class=""><a href="https://drive.google.com/uc?id=1c_6vP_xgHgLJDiVN6Oz9_QNuhxJGjVOx&amp;export=download">👉 Clique aqui para baixar: Informação básica - Lote 005</a></p><p id="a5d572f8-c675-4fbc-9ba5-b36125806e2f" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏗 <a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%20f926ec997ed543ed845d0d7a1b801cac.html">Viabilidade Arquitetônica</a></summary><div class="indented"><p id="1a6e85e7-4eeb-44ac-8d1b-15b313b23874" class=""><div class="indented"><p id="e91451ad-35b1-4267-b208-c29bea5ba6f1" class=""><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%20f926ec997ed543ed845d0d7a1b801cac.html">👉 Clique aqui</a></p><p id="a3256f4c-a199-49e4-aa90-dd3f37738983" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📈 Cálculo de VGV</summary><div class="indented"><p id="18255c23-8b70-42e6-9616-b80943dcca3e" class="">
+</p><p id="782841f1-db40-4e80-8351-0c296ef21818" class="">Premissas: </p><ul id="47b7775c-7213-49d7-8241-84c3945e2995" class="bulleted-list"><li style="list-style-type:disc">1m2 descoberto = 0.4m2 coberto </li></ul><ul id="fe11f1a7-477d-4ce6-9761-b663fc132b28" class="bulleted-list"><li style="list-style-type:disc">R$ /m2 venda = R$ 15k/m2</li></ul><figure id="9b0d5f13-da87-4814-a716-9916ec00c57b" class="image"><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/Untitled.png"><img style="width:1216px" src="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/Untitled.png"/></a></figure><p id="086430c9-2b23-4206-bd01-2593cf8befe0" class=""><div class="indented"><p id="9d017ed1-ae9a-4347-b274-c4b01e01d09e" class=""><mark class="highlight-teal_background"><a href="https://docs.google.com/spreadsheets/d/1UlbVBPyi2pykKIMrdcr762vIpZmPKYk-9N4H2CiwfxA/export?format=xlsx">👉 Clique aqui para baixar a planilha</a></mark></p><p id="a89bd5f7-6313-4ec6-bf92-57b9ee86c415" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📝 Orçamento de ODC/TDC</summary><div class="indented"><p id="6674d9c9-49d8-42fd-8879-16f8b5ba341c" class="">
+</p><p id="806bb653-ca2e-492f-b4b3-f8f3aef25752" class="">Neste terreno, é mais vantajoso cobrar TDC do que ODC<div class="indented"><ul id="ba13db75-9f5d-4447-926c-e0d650e60701" class="bulleted-list"><li style="list-style-type:disc">✅ <strong>TDC = R$ 775/m2</strong></li></ul><ul id="63d1edc2-ae63-4633-b057-1956eafe9c3f" class="bulleted-list"><li style="list-style-type:disc">❌ ODC = R$ 1.550/m2<ul id="143079cb-dc47-434a-8c7e-b79fed5dd9bd" class="bulleted-list"><li style="list-style-type:circle">Em caso de pagamento à vista existe 30% de desconto, portanto R$ 1.085/m2</li></ul></li></ul></div></p><p id="f1863357-18e6-4248-9f96-c17194dad7ef" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">💰 Valor do Lote </summary><div class="indented"><p id="f24982b2-375a-4b85-8161-58b618cd7c2c" class="">
+</p><ul id="738d4261-7266-4489-b0a0-a9c7a2f54729" class="bulleted-list"><li style="list-style-type:disc">Os proprietários pedem <strong>R$ 1.6MM</strong> no lote <figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="15aefc34-8ea4-48a6-b9e8-f20ac3daf371"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">O valor equivale a <strong>R$ 4.100/m2</strong></div></figure><p id="a7222308-1c00-443b-852d-58a388728fd4" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📊 Viabilidade Econômica</summary><div class="indented"><p id="c46f5eaf-265b-49f4-ba7b-a1925c35872b" class="">
+</p><figure id="4759dbc6-e1b2-43fd-bcee-a65537d8da98" class="image"><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/Untitled%201.png"><img style="width:685.9722290039062px" src="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/Untitled%201.png"/></a></figure><p id="65d4b88f-fdc6-4c4b-b93f-4ac187a18fca" class=""><div class="indented"><p id="86d55359-ddb6-4ae0-a421-838afebe5ada" class=""><mark class="highlight-teal_background"><strong>      </strong></mark><mark class="highlight-teal_background"><strong><a href="https://docs.google.com/spreadsheets/d/1UlbVBPyi2pykKIMrdcr762vIpZmPKYk-9N4H2CiwfxA/export?format=xlsx">👉 Clique aqui para baixar a planilha</a></strong></mark></p></div></p><p id="22a17357-1464-4bfc-b342-cd5be03ba0be" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔎 <a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Pesquisa%20de%20Mercado%203b7b1f980d1b49889a3996c78e460656.html">Pesquisa de Mercado</a></summary><div class="indented"><p id="5a89abbb-431c-46e0-a881-1240feea0a65" class=""><div class="indented"><p id="12d5baa9-9d25-401f-ba43-85d385a9c42e" class=""><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Pesquisa%20de%20Mercado%203b7b1f980d1b49889a3996c78e460656.html">👉 Clique aqui </a></p></div></p><p id="46064b24-4bf2-4ab2-be4b-7f8c055e0188" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏡 <a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Demanda%20por%20Apartamentos%20359317bcd682422388147f6c923f6ef3.html">Demanda por Apartamentos</a></summary><div class="indented"><p id="db47db14-dda0-4d5a-9cb3-34da41ef8c6b" class=""><div class="indented"><p id="4842a0a2-c8fa-4a8f-aa37-760a03ad1426" class=""><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Demanda%20por%20Apartamentos%20359317bcd682422388147f6c923f6ef3.html">👉 Clique aqui</a></p><p id="4bb0e495-b084-4a48-b2f9-125ab2ca4ccc" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">➕ Possibilidades de Expansão</summary><div class="indented"><ul id="55269e77-f8bd-4b0b-88c8-19919ef1face" class="bulleted-list"><li style="list-style-type:disc"><strong>O lote 17 (360m2) está à venda por R$ 1.5MM</strong>, mas tem problemas documentais que o proprietário está resolvendo <ul id="9734b437-a3da-4376-aef5-a6b941982601" class="bulleted-list"><li style="list-style-type:circle">Já recusou proposta de R$ 1MM no passado </li></ul></li></ul><ul id="036eef09-0c15-443f-b8c6-489a55334b35" class="bulleted-list"><li style="list-style-type:disc">O lote 13 (360m2) pertence a uma das irmãs herdeira dos 3 lotes em oferta <ul id="ac137c78-520d-487e-b1be-732ac636b67c" class="bulleted-list"><li style="list-style-type:circle">Não está à venda, mas cogita vender em caso de uma <strong>proposta muito boa</strong></li></ul><ul id="ca24dc41-640e-43eb-a826-13c66620b2e5" class="bulleted-list"><li style="list-style-type:circle">“Proposta muito boa” → R$ 1.5 MM cada (estimativa informal, sem confirmação pela proprietária)</li></ul></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📞 Contato</summary><div class="indented"><p id="14aa71a5-b314-48e5-9531-f281f6cbd41d" class="">
+</p><p id="8ba4296c-0f07-48c3-bc88-9501606cd771" class=""><strong>Athos Bernardes</strong></p><ul id="63cdbbc1-bf14-495f-8046-3963e244d857" class="bulleted-list"><li style="list-style-type:disc">CRECI-MG 55.358</li></ul><ul id="ecf90c22-2c5f-4215-8f34-2e58abd767ef" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20terreno%20na%20Rua%20Haiti%2064%2C%20Sion">(31) 98859-8058</a></li></ul><p id="c98a128d-be89-4e93-aa1c-eb92423f1ca0" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>🔀 Outros Terrenos</strong></summary><div class="indented"><p id="0caebc56-4670-4650-89d0-4564340ea785" class=""><div class="indented"><p id="93d5271f-9878-4127-9fb0-6f2ba64e2fa7" class=""><mark class="highlight-teal_background"><strong><a href="../Terrenos%20em%20Oferta%2096462f4abab540b68793cd2907ff54d5.html">👉 Conheça nossas outras opções em BH</a></strong></mark></p></div></p><p id="6535083a-9c2a-410a-b0f1-967accaf9ef6" class="">
+</p></div></details><p id="25db4202-5a6e-4fac-8056-10b4c74e449e" class="">
+</p><div id="6c09b3e6-31ac-4749-a18a-aedcab6f46ba" class="collection-content"><h4 class="collection-title">MATERIAL DE REFERÊNCIA</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="f926ec99-7ed5-43ed-845d-0d7a1b801cac"><td class="cell-title"><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%20f926ec997ed543ed845d0d7a1b801cac.html"><span class="icon">🏛️</span>Estudo de Viabilidade Arquitetônica</a></td></tr><tr id="3b7b1f98-0d1b-4988-9a39-96c78e460656"><td class="cell-title"><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Pesquisa%20de%20Mercado%203b7b1f980d1b49889a3996c78e460656.html"><span class="icon">🤓</span>Pesquisa de Mercado</a></td></tr><tr id="359317bc-d682-4223-8814-7f6c923f6ef3"><td class="cell-title"><a href="Oscar%20Trompovsky%20-%20390m2%20004cd25bf35a48848716d1822e582c44/MATERIAL%20DE%20REFERE%CC%82NCIA%206c09b3e631ac4749a18aaedcab6f46ba/Demanda%20por%20Apartamentos%20359317bcd682422388147f6c923f6ef3.html"><span class="icon">🏠</span>Demanda por Apartamentos</a></td></tr></tbody></table><br/><br/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

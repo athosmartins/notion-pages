@@ -1,0 +1,721 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Terra Nova - 435m2</title><style>
+<link rel="stylesheet" href="/style.css">
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0c849c22-e241-4c54-8cae-f35287babc7a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">2️⃣</span></div><h1 class="page-title">Terra Nova - 435m2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="b55e235a-c2dd-460c-9bbc-0a8c35bd5789" class="">Sion</h1><p id="22038fa7-9c9f-4536-8cb7-5ec69580c6d8" class="">
+</p><p id="c6f210a0-da5a-43e8-9988-d43fd3139c96" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7f0bf265-05c5-4c5e-add1-4d62034e2584"><div style="font-size:1.5em"><span class="icon">🖼️</span></div><div style="width:100%"><strong>435m2</strong> com coeficiente de aproveitamento = 1.5</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="10283d43-00fb-4cac-be10-9dc16be6cbae"><div style="font-size:1.5em"><span class="icon">🚀</span></div><div style="width:100%">VGV =<strong> R$ 10,3 MM</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5668b846-e557-4671-8043-2a037ae46012"><div style="font-size:1.5em"><span class="icon">💰</span></div><div style="width:100%">Valor de oferta do lote:<strong> R$ 2,1MM (R$ 4,8k/m2)</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c8d059a6-422d-42e4-a18a-78a8591b558b"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%">Localização privilegiada</div></figure><p id="78f0565c-114a-4de4-b9ec-ce9e27de27d4" class="">
+</p><p id="6b3b9419-39f0-485d-8adc-003a56114d2e" class=""><em><mark class="highlight-gray">👇 Clique nas setas para expandir </mark></em></p><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📍 Localização</summary><div class="indented"><p id="776da06c-1d67-45e2-baa7-32fe8d12f2f5" class="">
+</p><p id="2d8a7909-7966-446c-aedc-e37877580079" class=""><strong>Rua Terra Nova, 50 - Sion</strong></p><p id="2f412ce3-f109-4fcb-9dba-7f9fec8d9f03" class="">Link Google Maps: <a href="https://maps.app.goo.gl/VKp3hCoHC3Jr4Dd67">👉 clique aqui</a></p><figure id="5dfb8135-4496-490d-b99d-908a1a18987c" class="image"><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/99911ccc-8585-44c1-b6be-bde9f044524c.png"><img style="width:640px" src="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/99911ccc-8585-44c1-b6be-bde9f044524c.png"/></a></figure><p id="373b7ec4-a579-4450-854b-d275cbe32a35" class="">
+</p><p id="8c1ad0b8-f3ab-4c81-a6d8-195475ffbafc" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📐 Dimensões e Zoneamento</summary><div class="indented"><p id="625cd9ca-715b-4ffa-9364-2f857ba350d9" class="">
+</p><ul id="da5915f3-b5f9-4a23-b3cd-9b68565659ca" class="bulleted-list"><li style="list-style-type:disc"><strong>Zona Fiscal:</strong> 113</li></ul><ul id="f460fc0d-7170-4daa-a07a-e0e5d226450e" class="bulleted-list"><li style="list-style-type:disc"><strong>Quadra: </strong>143</li></ul><ul id="845e3b4b-4809-4e1c-827a-0598a41cd6f4" class="bulleted-list"><li style="list-style-type:disc"><strong>Lotes:</strong> 021</li></ul><ul id="ee7c6ec5-4c1a-46ad-ad39-34a9fa145242" class="bulleted-list"><li style="list-style-type:disc"><strong>Área Total:</strong> 435m²<ul id="bbe5c336-373a-488f-9bb2-831668cf35b9" class="bulleted-list"><li style="list-style-type:circle"><strong>Frente: </strong>12m </li></ul></li></ul><ul id="8aab62aa-5136-4395-8817-ec351fd27b9a" class="bulleted-list"><li style="list-style-type:disc"><strong>Zoneamento:</strong> OM-3<ul id="30911996-9aaa-42c5-9671-7310783b3224" class="bulleted-list"><li style="list-style-type:circle"><strong>CA Máx: </strong>1.5</li></ul><ul id="52b80ac9-6925-4ba6-ac7b-2c5c811087e0" class="bulleted-list"><li style="list-style-type:circle"><strong>Cota de terreno por unidade: </strong>40<ul id="f996ab3f-09fb-471d-94e8-14de75587937" class="bulleted-list"><li style="list-style-type:square">Número máximo de unidades: 11</li></ul></li></ul><ul id="7960de74-154a-4b5a-8efb-caf4a0e5047c" class="bulleted-list"><li style="list-style-type:circle"><strong>Área Permeável Mínima:</strong> 20%</li></ul><ul id="1b326d17-08c9-4a61-8378-f9f94ac9eefe" class="bulleted-list"><li style="list-style-type:circle"><strong>Altimetria máxima:</strong> cota 1035m <ul id="878ce9e0-2a50-40cb-be04-79f6f889436e" class="bulleted-list"><li style="list-style-type:square">O terreno está situado na cota 1003m, portanto altimetria máxima de ~32m → <strong>não é um problema, dado o tamanho do lote</strong></li></ul><p id="7ecf7988-df73-40c5-afcd-0edef83a5c02" class="">
+</p></li></ul></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⬇️ Informação Básica</summary><div class="indented"><p id="df68cbc2-c091-4f9a-9648-8381d67b5a9f" class="">
+</p><p id="659900b9-bb32-4d0d-8df1-4eedff617c3b" class="">Clique nos link abaixo para baixar: <div class="indented"><p id="d041895e-8469-424e-a7b3-c51126a885b0" class=""><a href="https://drive.google.com/uc?id=1ymI3cV8EK0JQb8ngSPMX8-1ssRWdxOjV&amp;export=download">👉 Informação básica - Lote 021</a></p></div></p><p id="a21c4c5c-4ad4-4de5-87d7-2ad1a9d0cb98" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏢 Produto Sugerido</summary><div class="indented"><p id="5b1ad15f-de4c-4737-ad9b-97eea7787afa" class="">
+</p><p id="4b05d4d7-0475-45bf-825e-2a982b030a39" class="">Com base na <a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Pesquisa%20de%20Mercado%20c5e94cce50094e0aaaf98f6d06203626.html">pesquisa de mercado</a>, <a href="https://www.notion.so/Demanda-por-Apartamentos-ffe46de4bb2b47ea844246adceb0d973?pvs=21">pesquisa de demanda</a> <mark class="highlight-default">e possibilidades do terreno</mark>, sugerimos o produto:</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="7e2c9e94-80de-4849-8324-b4cbf5d056f8"><div style="font-size:1.5em"><span class="icon">🏡</span></div><div style="width:100%"><strong>2 quartos de 74m2 com 2 vagas por R$ 15k/m2</strong>  &amp; <strong>2 quartos de 74m2 com 1 vaga por R$ 14k/m2</strong>  </div></figure><p id="b4676288-f3d6-45ef-9616-3c2f51129f8c" class="">
+</p><p id="856c4952-1bfe-431e-b07d-2b8a7aa5bcd8" class="">É possível esgotar o coeficiente de aproveitamento com <strong>8 unidades</strong>: <div class="indented"><blockquote id="6f8e4aba-f4a5-4dfd-82a0-ce24766b46a0" class=""><strong>1 unidade garden</strong><ul id="a90867ea-dadb-4683-b2c5-0460b61024ca" class="bulleted-list"><li style="list-style-type:disc"><em>74m2 cobertos + 5m2 descobertos → 2 vagas (1 unidade)</em></li></ul></blockquote><p id="4959b0ef-24b1-428f-9d43-a6215f2428d7" class="">
+</p><blockquote id="b7f31c76-2660-44dc-beec-8adb21156ea3" class=""><strong>5 unidades tipo</strong><ul id="a42977e2-0399-4512-a51f-d6fc3a38cf51" class="bulleted-list"><li style="list-style-type:disc"><em>74m2 cobertos → 2 vagas (3 unidades)</em></li></ul><ul id="c1607e38-5849-4775-b2f6-488706861766" class="bulleted-list"><li style="list-style-type:disc"><em>74m2 cobertos → 1 vaga (2 unidades)</em></li></ul></blockquote><p id="5f147f5e-ac0c-415c-a94b-9bab74651791" class="">
+</p><blockquote id="850b571f-5a8e-4747-9eb4-03a8d9fef2a2" class=""><strong>2 Coberturas</strong><ul id="e7b62d2b-099d-49e3-846a-c482808839e5" class="bulleted-list"><li style="list-style-type:disc"><em>104m2 cobertos + 44m2 descobertos → 2 vagas</em><ul id="eff50281-d651-4f56-8ca3-2768297d96e7" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Foram previstas unidades com 3 quartos, sendo uma suíte no 2o pavimento</mark></li></ul><ul id="4da7dd60-b440-4a83-82b6-7de187e51938" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">74m2 cobertos no 1o nível</mark></li></ul><ul id="534b6812-d4cb-4411-87b4-d5f4296f2005" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">30m2 cobertos + 44m2 descobertos no 2o nível</mark></li></ul></li></ul></blockquote></div></p><p id="4906eb7a-e512-48db-a49f-5d9fa9d197ed" class="">
+</p><h3 id="3dab6a6c-cbbd-43e4-81d7-6ddd78590dd9" class=""><mark class="highlight-teal_background"><strong><a href="https://drive.google.com/uc?export=download&amp;id=15P4yfs3hKnt-iNkNi8oRcynRdjVF-_FK">Baixar Estudo de Viabilidade Arquitetônica</a></strong></mark></h3><p id="4883683e-47f1-42ea-a54e-b3ef9ec8bf87" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏗 <a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%202febcf6aeccf4b449e9c404e3d9f5b2e.html">Viabilidade Arquitetônica</a></summary><div class="indented"><p id="a0b71eb4-18d9-4b96-a94f-2df8d4db5d27" class=""><div class="indented"><p id="725ab0c7-f28d-4e2c-92cd-a71a3a3525dc" class=""><mark class="highlight-teal_background"><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%202febcf6aeccf4b449e9c404e3d9f5b2e.html">👉 Clique aqui</a></mark></p></div></p><p id="322b7342-bf94-4212-95c3-b45aa533be27" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📈 Cálculo de VGV</summary><div class="indented"><p id="94c38f2b-ef48-47d2-8273-a13cfacd69ff" class="">
+</p><p id="101f0db4-2cbb-46d4-a828-f902b965fdec" class=""><strong>Premissas</strong>: </p><ul id="4abfab0b-4212-42a7-9b46-2bea3fd79790" class="bulleted-list"><li style="list-style-type:disc">1m2 descoberto = 0.4m2 coberto </li></ul><ul id="6ac93deb-89b6-40f3-8fea-ccfa986c933e" class="bulleted-list"><li style="list-style-type:disc">R$ /m2 venda = R$ 16k/m2<figure id="a8231edd-9f11-4fd3-abb3-7996f457cecf" class="image"><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/Untitled-2.jpg"><img style="width:694px" src="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/Untitled-2.jpg"/></a></figure><p id="c661c529-f34b-4014-8fb8-a9bcce9b7d8d" class="">
+</p><p id="9653e04b-75b9-422e-8c5f-319a28ebd7cb" class=""><mark class="highlight-teal_background"><strong><a href="https://docs.google.com/spreadsheets/d/12TCH9C-Te_gJrnu9iYn3c-Vk1R-dWyVF02bDhfJ4Afk?usp=drive_fs">👉 Clique aqui para baixar a planilha</a></strong></mark></p><p id="650fe29c-63f7-4c43-95a4-ae6aac37c7eb" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📝 Orçamento de ODC/TDC</summary><div class="indented"><p id="8377cf85-8753-4454-88fc-f380166771a9" class="">
+</p><ul id="85068a73-74bf-4232-973e-1a6a4ac5437e" class="toggle"><li><details ><summary><strong>✅ ODC = R$ 2.000/m2</strong></summary><ul id="2baee12b-21f9-4430-832f-2a9b8ff12ef5" class="bulleted-list"><li style="list-style-type:disc">Em caso de pagamento à vista existe 30% de desconto, portanto </li></ul><ul id="f9efc7a0-1f48-4d6f-ab52-64c0fe5665d2" class="bulleted-list"><li style="list-style-type:disc">Conforme estudo de viabilidade arquitetônico, são necessários 168m2 de TDC para se esgotar o potencial construtivo de 1.5, portanto <strong>R$ 235k em ODC</strong></li></ul><p id="a1d63516-3e46-4ed1-b2af-3ab5e6075fd5" class="">
+</p></details></li></ul><p id="b6f363ff-6d46-40d3-9726-a89966fa73fc" class="">
+</p><ul id="9956c901-2890-4a30-a9e8-beb7ad2c1980" class="toggle"><li><details ><summary><strong>🚧 TDC → </strong>ainda não orçado</summary></details></li></ul><p id="2b99ec0f-70c7-48d0-9836-995af52c67b4" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">💰 Valor do Lote</summary><div class="indented"><p id="1fd6f77f-102f-4dfd-9722-77b57728ff62" class="">
+</p><ul id="a7beb638-96cf-4ee7-9a41-fbfa227c3d79" class="bulleted-list"><li style="list-style-type:disc">Os proprietários pedem <strong>R$ 1,96MM</strong> no lote →<strong> R$ 4,5k/m2 </strong></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📊 Viabilidade Econômica</summary><div class="indented"><p id="7fe6e9f8-6f7f-46d1-b832-c4d94aed5205" class="">
+</p><figure id="76ec1c36-8c6a-42a1-9877-c7d51978f530" class="image"><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/Untitled.png"><img style="width:862px" src="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/Untitled.png"/></a></figure><p id="d85f2bfe-8058-42c0-b5fc-0790e4f5d8f6" class=""><div class="indented"><h3 id="c484bc8f-8af1-4e1a-bba4-2fe59e307d7a" class=""><mark class="highlight-teal_background"><a href="https://docs.google.com/spreadsheets/d/12TCH9C-Te_gJrnu9iYn3c-Vk1R-dWyVF02bDhfJ4Afk/export?format=xlsx">👉 Clique aqui para baixar a planilha</a></mark></h3></div></p><p id="c9dc64a0-3d0f-4b19-bea8-cd0739dba733" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔎 <a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Pesquisa%20de%20Mercado%20c5e94cce50094e0aaaf98f6d06203626.html">Pesquisa de Mercado</a></summary><div class="indented"><p id="c3080e7b-e106-4b7b-89b4-47e2ced708d7" class="">
+</p><p id="a9c79077-6bfd-45a6-8890-1169bcd233ad" class=""><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Pesquisa%20de%20Mercado%20c5e94cce50094e0aaaf98f6d06203626.html">👉 Clique aqui </a></p><p id="a723c025-f9fe-49df-90fd-79b0dfef4355" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">➕ Possibilidades de Expansão</summary><div class="indented"><p id="ce691852-034d-4b46-9406-d5680ecf3b73" class="">
+</p><ul id="9b905397-9093-444a-b890-6925a7853a12" class="bulleted-list"><li style="list-style-type:disc">❌ <strong>Não há possibilidades para agregar mais lotes</strong>, uma vez que os terrenos adjacentes já tem prédios construídos</li></ul><p id="3444a214-886d-43e5-800b-b4e2ff339de3" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📞 Contato</summary><div class="indented"><p id="15af6cc6-d646-4f66-a724-fdc4f3557fd7" class="">
+</p><p id="c1687241-a351-409b-ba87-7dae8bd06274" class=""><strong>Athos Bernardes</strong></p><ul id="548044b9-26c9-411e-921d-f18533e36fb7" class="bulleted-list"><li style="list-style-type:disc">CRECI-MG 55.358</li></ul><ul id="1defe23e-a2ef-49d4-b615-f26ba0ca6508" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20terreno%20na%20Rua%20Haiti%2064%2C%20Sion">(31) 98859-8058</a></li></ul><p id="72f69676-55d1-48c5-a851-9616a753aaad" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>🔀 Outros Terrenos</strong></summary><div class="indented"><p id="c8ad23bc-6030-4dd3-bfaf-e6efa6c8df58" class=""><div class="indented"><p id="84f495d2-dae4-4dfc-9715-19aad235d701" class=""><mark class="highlight-teal_background"><a href="../Terrenos%20em%20Oferta%2096462f4abab540b68793cd2907ff54d5.html">👉 Conheça nossas outras opções em BH</a></mark></p></div></p><p id="be469f9f-562c-4b61-85c0-886ebfa412e8" class="">
+</p></div></details><p id="64c4ffca-fa50-4c7d-9feb-02590fa1785d" class="">
+</p><div id="234f1748-2d9d-4a9c-8e89-88cc68721ae2" class="collection-content"><h4 class="collection-title">MATERIAL DE REFERÊNCIA</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Status</th></tr></thead><tbody><tr id="2febcf6a-eccf-4b44-9e9c-404e3d9f5b2e"><td class="cell-title"><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%202febcf6aeccf4b449e9c404e3d9f5b2e.html"><span class="icon">🏛️</span>Estudo de Viabilidade Arquitetônica</a></td><td class="cell-;~NI"></td></tr><tr id="c5e94cce-5009-4e0a-aaf9-8f6d06203626"><td class="cell-title"><a href="Terra%20Nova%20-%20435m2%200c849c22e2414c548caef35287babc7a/MATERIAL%20DE%20REFERE%CC%82NCIA%20234f17482d9d4a9c8e8988cc68721ae2/Pesquisa%20de%20Mercado%20c5e94cce50094e0aaaf98f6d06203626.html"><span class="icon">🤓</span>Pesquisa de Mercado</a></td><td class="cell-;~NI"></td></tr></tbody></table><br/><br/></div><p id="f429885e-92c6-4332-8830-913f7174e4e9" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,729 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Ouro Fino - 1.228m2</title><style>
+<link rel="stylesheet" href="/style.css">
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="60f41911-c908-4bcb-a3c7-01149f201b78" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">1️⃣</span></div><h1 class="page-title">Ouro Fino - 1.228m2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="ccac3108-5d27-4dd9-b518-c0cd4419b4e7" class="">Bairro Cruzeiro</h1><p id="8b3b42d3-001a-4b0f-9a5a-f8557a99b58d" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f7487939-1f3e-4697-96a6-bfcd6a0b4d0a"><div style="font-size:1.5em"><span class="icon">🖼️</span></div><div style="width:100%"><strong>1.228m2</strong> com <strong>39m de frente</strong> e <strong>CA = 2.0</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="4f2b661b-b9ff-4378-9c77-98bf1d5ac5ae"><div style="font-size:1.5em"><span class="icon">🚀</span></div><div style="width:100%">VGV =<strong> R$ 40.9 MM</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="91dea08b-f37a-4cf9-993d-c29856767de8"><div style="font-size:1.5em"><span class="icon">💰</span></div><div style="width:100%">Valor de oferta do lote:<strong> </strong>R$ 6.9M <strong>(16% do VGV)</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d7d07973-78b7-4190-9ccb-aeee886b23ba"><div style="font-size:1.5em"><span class="icon">✨</span></div><div style="width:100%"><strong>Maior terreno atualmente em oferta no bairro</strong></div></figure><p id="bb31b176-3e98-46b5-9476-8b53ba4c00d5" class="">
+</p><p id="556af243-b257-4573-8806-558f778c8de7" class=""><em><mark class="highlight-gray">👇 Clique nas setas para expandir </mark></em></p><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📍 Localização</summary><div class="indented"><p id="f3c4a869-b5e1-49a8-af60-59159be4c0f3" class="">
+</p><p id="a9b6cb9f-e3bf-46e4-bc04-e5617c934485" class=""><strong>Rua Ouro Fino números 28, 40 e 50 </strong></p><p id="8706d58a-68c4-47c8-97a8-babcf44bb5b0" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8c42609a-4bdb-4d8b-8339-f427dd7dd7a0"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Quase em frente ao empreendimento <a href="https://www.monterre.com.br/empreendimentos/la-pienezza/">La Pienezza da Monterre</a>: <strong>70% vendido em maio/2024, com entrega prevista para 03/2026, média de R$ 17k/m2</strong></div></figure><p id="50b20d4c-78ff-4a88-a0da-93af966e3116" class="">
+</p><p id="7f48fa90-3074-4745-9c54-399921bd0ac8" class="">Link Google Maps: <a href="https://maps.app.goo.gl/Hc9T6EqjGTafxnew6">👉 clique aqui</a></p><p id="17d8c01d-75fc-4c2a-b933-85e070c32159" class="">
+</p><figure id="80599de4-b18b-4def-b89d-556e1ae95074" class="image"><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/Untitled.png"><img style="width:1275.0283203125px" src="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/Untitled.png"/></a></figure><p id="5779dd37-0be7-434c-9e14-83aed552ad69" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📐 Dimensões e Zoneamento</summary><div class="indented"><p id="2d26654f-0085-4e05-99b6-ebef76214706" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d199e0c7-932b-45e7-b510-2c71af24476c"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><strong>O terreno em questão é o 3o maior dentre todos os lançamentos atuais nas regiões do Carmo e Cruzeiro</strong>, menor apenas que o La Pienezza da Monterre (2.640m2) e Anima da Concreto (1.867m2)</div></figure><p id="dd2accec-b66c-4395-9c93-f8910ce1489a" class="">
+</p><ul id="d60e7ef3-6466-4b68-a1b1-9f887226776d" class="bulleted-list"><li style="list-style-type:disc"><strong>Zona Fiscal:</strong> 101</li></ul><ul id="78440967-d5bc-4ec9-97bb-69ee0869134a" class="bulleted-list"><li style="list-style-type:disc"><strong>Quadra: </strong>110</li></ul><ul id="8545d1e5-c118-45ea-a2d1-0c3b6a2c8bc8" class="bulleted-list"><li style="list-style-type:disc"><strong>Lotes:</strong> 010, 013 e 015</li></ul><ul id="1c93ad86-896a-4bfb-a643-82e749ebe13f" class="bulleted-list"><li style="list-style-type:disc"><strong>Área Total:</strong> 1.221m²<ul id="f86709a9-dd9c-4472-b453-494429ebb53d" class="bulleted-list"><li style="list-style-type:circle"><strong>Frente: </strong>39m para Rua Ouro Fino, 11m para Rua Senhora das Graças </li></ul></li></ul><ul id="cb6aedda-7362-4868-a628-34d2ee7b2293" class="bulleted-list"><li style="list-style-type:disc"><strong>Zoneamento:</strong> OP-1<ul id="9af1456d-2938-428e-9d4e-e3dc169c7f32" class="bulleted-list"><li style="list-style-type:circle"><strong>CA Máx: </strong>2.0</li></ul><ul id="bd290600-0c36-4651-aa71-f5a38945992f" class="bulleted-list"><li style="list-style-type:circle"><strong>Cota de terreno por unidade: </strong>40<ul id="f5654801-227b-4080-bab1-e3dd550a5dfc" class="bulleted-list"><li style="list-style-type:square">Número máximo de unidades: 27</li></ul></li></ul><ul id="9be19cce-2240-4704-828b-25dc26770365" class="bulleted-list"><li style="list-style-type:circle"><strong>Área Permeável Mínima:</strong> 20%</li></ul><ul id="aefe5934-5fdc-4371-a34c-7a2dea3fedfb" class="bulleted-list"><li style="list-style-type:circle"><strong>Altimetria máxima:</strong> 27m<ul id="9a36e8a8-701e-4244-af1e-60a1fce6261c" class="bulleted-list"><li style="list-style-type:square">Conseguimos esgotar o potencial de 2.0 mesmo com o limite de altimetria</li></ul></li></ul><p id="2e0041c9-91d3-4f28-ac13-f322d83d16b3" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⬇️ Informação Básica</summary><div class="indented"><p id="05c161ef-3f92-4adb-b442-298ec89bdcf8" class="">
+</p><p id="7f49b772-fcfc-41b8-b7bc-431b503afd8f" class="">Clique nos links abaixo para baixar: <div class="indented"><ul id="55d195ca-554f-4936-9f10-b395bf85862f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?id=10bjJA363RGzfr-zEeGWlT1UrP3hBk6g8&amp;export=download">👉 Informação básica - Lote 010</a></li></ul><ul id="301d2105-2cc8-465d-a4a4-4058b2d705de" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?id=10WtOgCF2RnPIfzwBhVLzMjCJ3HsG4Cu5&amp;export=download">👉 Informação básica - Lote 013</a></li></ul><ul id="c924b656-4567-4ff7-864d-0c5506bece30" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?id=10WkUj_unIwnEV7AcLThr_wpU3K8kzQZC&amp;export=download">👉 Informação básica - Lote 015</a></li></ul><p id="197b1e61-3e05-44ca-9762-badffaf805cc" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏢 Produto Sugerido</summary><div class="indented"><p id="b57fc851-f024-4d28-8513-7d8f8dd049a0" class="">
+</p><p id="124e9ed8-5fe0-464c-ad9b-73f4f29dd0da" class="">Com base na <a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Pesquisa%20de%20Mercado%2050fd907c9f964e4685b52b86ebfa0c51.html">pesquisa de mercado</a> e <a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Demanda%20por%20Apartamentos%20235fcc5bd3dd4e78a0434351fd4cc27a.html">pesquisa de demanda</a>, sugerimos o produto:</p><p id="153bae40-eb0b-474a-9660-23f6b7f59edc" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d3653d62-201c-4a35-865b-13efc224a4e3"><div style="font-size:1.5em"><span class="icon">🏡</span></div><div style="width:100%"><strong>3 quartos com 94m2 e 2 vagas por R$ 15.8k/m2</strong> </div></figure><p id="9d4aac39-48e4-46d5-bf64-f1d6771309ff" class="">
+</p><p id="21f25e4b-46be-426a-8ef1-4317d5d59cf6" class="">É possível esgotar o coeficiente de aproveitamento com <strong>24 unidades</strong>: </p><blockquote id="4d1c5faf-1173-457c-9d2b-b9b573cef372" class=""><strong>2 unidades garden</strong><ul id="e7b0cf3e-e38c-479d-9782-abc1b1ae019b" class="bulleted-list"><li style="list-style-type:disc"><em>94m2 cobertos + 56m2 descobertos → 3 vagas</em></li></ul></blockquote><p id="634c7918-ff31-4c0c-a804-4f065d91fc55" class="">
+</p><blockquote id="6095c010-38f7-43c9-8475-cd932f383dbf" class=""><strong>18 unidades tipo</strong><ul id="d575e126-b441-4d0d-8f9b-cdbfc4eab803" class="bulleted-list"><li style="list-style-type:disc"><em>94m2 cobertos → 2 vagas</em></li></ul></blockquote><p id="0434c45b-c815-45a2-a834-5c876d07b6e3" class="">
+</p><blockquote id="e22aacd5-8903-400a-9b39-d950a06a5667" class=""><strong>4 Coberturas</strong><ul id="390862d3-db2b-4f43-bd14-48f225f38703" class="bulleted-list"><li style="list-style-type:disc"><em>141m2 cobertos + 47m2 descobertos → 3 vagas</em><ul id="05ee57c9-5cc6-4b14-8ab1-298d83997070" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">Foram previstas unidades com 4 quartos, sendo uma suíte no 2o pavimento</mark></li></ul><ul id="3953ff3a-5a61-4294-9691-98a73b75cde0" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">94m2 cobertos no 1o nível</mark></li></ul><ul id="842e2fee-a92c-4a6b-947f-1a438d6b99e9" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-gray">47m2 cobertos + 47m2 descobertos no 2o nível</mark></li></ul></li></ul></blockquote><p id="73210d71-580b-46c8-990c-e4498e177b16" class="">
+</p><h3 id="9fcf1481-76a8-47b8-b949-ddb89f733ef6" class=""><mark class="highlight-teal_background"><strong><a href="https://drive.google.com/uc?export=download&amp;id=1URGVpEaiTEARaIvgThRSW-WEJ4EcjlYX">Baixar Estudo de Viabilidade Arquitetônica</a></strong></mark></h3><p id="b0bc6f94-99bc-4e56-a461-066d37826012" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏗 <a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%208ed12c83cb264a07be6d3b2541d755ea.html">Viabilidade Arquitetônica</a></summary><div class="indented"><p id="2d017f96-8dc5-46ec-974c-23e7544e70e2" class="">
+</p><p id="55b81295-03f6-4ed6-82d6-68b9c4af148e" class=""><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%208ed12c83cb264a07be6d3b2541d755ea.html">👉 Clique aqui</a></p><p id="fdfc51ff-e8c2-4288-a272-c822d62b7603" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📈 Cálculo de VGV</summary><div class="indented"><p id="2e4cd663-e524-4478-bf5d-c18d1b0bbe2a" class="">
+</p><p id="c8ff3671-d3c5-422e-aac9-75bd6daffeba" class="">Premissas: </p><ul id="b1f68406-edce-457a-a94f-fe94c162bf64" class="bulleted-list"><li style="list-style-type:disc">1m2 descoberto = 0.5m2 coberto </li></ul><ul id="06fdaaf8-b10a-4ded-ab2a-814d7313d84f" class="bulleted-list"><li style="list-style-type:disc">R$ /m2 venda = R$ 15.8k/m2</li></ul><figure id="8dbffc23-9ed1-40f5-8593-57e772f56d71" class="image"><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/Screenshot_20240710_110021_Sheets.jpg"><img style="width:1504px" src="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/Screenshot_20240710_110021_Sheets.jpg"/></a></figure><p id="6c54069d-5ad8-46e3-870c-b8c39cdaabdd" class="">
+</p><p id="2a26f140-b22c-44ef-ae1d-35e7c31eda90" class=""><a href="https://docs.google.com/spreadsheets/d/1MeBKSWxeWefxS4sVzUHGtjUIvn_WfNCIGmFSyoEwc0o/export?format=xlsx">👉 Clique aqui para baixar a planilha</a></p><p id="fe9b85ac-1dfe-4c28-bd66-363112cf42bd" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📝 Orçamento de ODC/TDC</summary><div class="indented"><p id="92308209-e218-416f-9adc-07732f8552b7" class="">
+</p><p id="dc6b920e-21c7-47ed-a136-c67ba44a7a8c" class="">Neste terreno, a <strong>TDC</strong> é mais vantajosa que a ODC</p><p id="96b4002b-c761-4019-a14a-e0f5f736da0b" class="">
+</p><ul id="2fed2407-8c90-4491-9b60-493049a0a7fb" class="toggle"><li><details ><summary><strong>✅ TDC = R$ 1.000/m2</strong></summary><ul id="d5d97e72-114d-4fa5-8308-8697d2ee3132" class="bulleted-list"><li style="list-style-type:disc">Orçado na Decisão Engenharia em 20/06/2024</li></ul></details></li></ul><ul id="5e52c47e-16d0-4d6d-89f7-99ed43b7e3cf" class="toggle"><li><details ><summary>❌ ODC = R$ 2.000/m2</summary><ul id="98219ef1-86a5-4ebc-a2d1-8afb44623cea" class="bulleted-list"><li style="list-style-type:disc">Em caso de pagamento à vista existe 30% de desconto, portanto <strong>R$ 1.400/m2</strong></li></ul></details></li></ul><p id="b308bc0b-c201-434c-87ac-dbf4aa93f4a1" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">💰 Valor do Lote</summary><div class="indented"><p id="d1df0736-2150-44c4-b77b-8ffe4721631b" class="">
+</p><ul id="d771faae-451b-4100-a58a-f1ad3d278a6a" class="bulleted-list"><li style="list-style-type:disc">Os proprietários pedem <strong>R$ 6.9MM</strong> no lote (<strong>R$ 5.6k/m2</strong>)<ul id="a48b0166-cf57-4c6e-96d9-2cea2b8bc9de" class="bulleted-list"><li style="list-style-type:circle">Ouro Fino 28: 485m2 por 1.85M → <strong>R$ 3.8k/m2, aceita permuta por apartamento pronto de até 700k</strong></li></ul><p id="ba063acc-70da-408e-afc0-478d8bbaad58" class="">
+</p><ul id="95ee67e1-d247-4d99-8cfe-74023d676a12" class="bulleted-list"><li style="list-style-type:circle">Ouro Fino 40: 375m2 por 2.85M → <strong>R$ 7.6k/m2</strong></li></ul><p id="e5693652-e32f-4c6e-aa10-f36310b839d9" class="">
+</p><ul id="5d0cff22-7683-4ca8-9f77-5e53e24b685c" class="bulleted-list"><li style="list-style-type:circle">Ouro Fino 50: 368m2 por 2.3M → <strong>R$ 6.3k/m2, apenas dinheiro (vários herdeiros)</strong></li></ul></li></ul><p id="188b8208-49aa-4845-af75-cccd215c8e73" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="3ac554c1-46c6-4e34-b4a8-9944b8538caa"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><strong>Estes valores são fruto de muita negociação com os proprietários, que são bem difíceis. Não acreditamos haver espaço para desconto</strong></div></figure><p id="47d1cd88-0b74-4288-b55b-92488be133de" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📊 Viabilidade Econômica</summary><div class="indented"><p id="c55e1b05-aedc-4d07-b756-a28958007335" class="">
+</p><figure id="1183ee8e-fa81-809b-8b8a-dd43f7e3363e" class="image"><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/image.png"><img style="width:960px" src="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/image.png"/></a></figure><p id="80695d33-6b3f-4eb9-9fa6-2d2848ea3f8a" class=""><div class="indented"><p id="675c87b3-7712-47ba-a9f9-43d9e04d1af0" class=""><mark class="highlight-teal_background"><a href="https://docs.google.com/spreadsheets/d/1MeBKSWxeWefxS4sVzUHGtjUIvn_WfNCIGmFSyoEwc0o/export?format=xlsx&amp;id=1MeBKSWxeWefxS4sVzUHGtjUIvn_WfNCIGmFSyoEwc0o">👉 Clique aqui para baixar a planilha</a></mark></p></div></p><p id="a4a9d257-4ea9-4044-a86e-9934f1e7abce" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔎 <a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Pesquisa%20de%20Mercado%2050fd907c9f964e4685b52b86ebfa0c51.html">Pesquisa de Mercado</a></summary><div class="indented"><p id="2fca2b06-3aee-4eb4-bbe1-ea8e0125a786" class="">
+</p><p id="e3b3f040-e930-46f3-98f2-c8f9303ef956" class=""><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Pesquisa%20de%20Mercado%2050fd907c9f964e4685b52b86ebfa0c51.html">👉 Clique aqui </a></p><p id="f740fb98-5f7d-482c-898b-7c0e642a5e0e" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">➕ Possibilidades de Expansão</summary><div class="indented"><p id="2edb32a9-0426-4e0e-a200-00154ae40bea" class="">
+</p><ul id="65f7f5d1-fab9-4025-9148-9b940c228b3f" class="bulleted-list"><li style="list-style-type:disc"><strong>❌ Não há possibilidades de agregar outros terrenos</strong><ul id="2b88795f-b59f-4376-b89c-758b7a405d31" class="bulleted-list"><li style="list-style-type:circle">O único lote adjacente não consolidado é na Rua Senhora das Graças 51 (420m2), pertencente à Fundação Espírita Cárita</li></ul><ul id="ab6048d9-d2cb-41ab-8dcb-342412fa921c" class="bulleted-list"><li style="list-style-type:circle">A fundação não tem interesse em negociar o imóvel</li></ul><p id="44aa95c5-9868-463a-adf6-030070dd2b01" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📞 Contato</summary><div class="indented"><p id="ae48a801-61ca-4a4c-a278-4fec8d03d1fe" class="">
+</p><p id="360b21ac-db57-408f-907d-73b0b8e1c64d" class=""><strong>Athos Bernardes</strong></p><ul id="392092b6-2991-42f8-8d26-54af6be7e76d" class="bulleted-list"><li style="list-style-type:disc">CRECI-MG 55.358</li></ul><ul id="58e62cfa-1551-401f-9832-336294f8281a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20um%20terreno">(31) 98859-8058</a></li></ul><p id="2e3ae7bc-fd90-40b8-a8ea-5fec649d8163" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>🔀 Outros Terrenos</strong></summary><div class="indented"><p id="6bfb1cf3-fad4-492c-8730-7064cea2c64e" class="">
+</p><p id="bf945876-a210-40e5-9ef3-d9b1c050da2a" class=""><a href="../Terrenos%20em%20Oferta%2096462f4abab540b68793cd2907ff54d5.html">👉 Conheça nossas outras opções em BH</a></p><p id="79fa62f5-aaa3-4412-a828-f6070aab2a81" class="">
+</p></div></details><p id="3169f4a3-bdde-460e-bf8a-5e4ee5198d6f" class="">
+</p><div id="ad74bb3f-75bc-41c9-b41e-4ba130aab749" class="collection-content"><h4 class="collection-title">MATERIAL DE REFERÊNCIA</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="8ed12c83-cb26-4a07-be6d-3b2541d755ea"><td class="cell-title"><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%208ed12c83cb264a07be6d3b2541d755ea.html"><span class="icon">🏛️</span>Estudo de Viabilidade Arquitetônica</a></td></tr><tr id="50fd907c-9f96-4e46-85b5-2b86ebfa0c51"><td class="cell-title"><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Pesquisa%20de%20Mercado%2050fd907c9f964e4685b52b86ebfa0c51.html"><span class="icon">🤓</span>Pesquisa de Mercado</a></td></tr><tr id="235fcc5b-d3dd-4e78-a043-4351fd4cc27a"><td class="cell-title"><a href="Ouro%20Fino%20-%201%20228m2%2060f41911c9084bcba3c701149f201b78/MATERIAL%20DE%20REFERE%CC%82NCIA%20ad74bb3f75bc41c9b41e4ba130aab749/Demanda%20por%20Apartamentos%20235fcc5bd3dd4e78a0434351fd4cc27a.html"><span class="icon">🏠</span>Demanda por Apartamentos</a></td></tr></tbody></table><br/><br/></div><p id="f1fc7598-8dcc-4019-98c8-8b085e557b43" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

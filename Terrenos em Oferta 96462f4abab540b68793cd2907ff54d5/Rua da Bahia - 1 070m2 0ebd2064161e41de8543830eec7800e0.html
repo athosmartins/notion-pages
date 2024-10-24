@@ -1,0 +1,710 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Rua da Bahia  - 1.070m2</title><style>
+<link rel="stylesheet" href="/style.css">
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0ebd2064-161e-41de-8543-830eec7800e0" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">2️⃣</span></div><h1 class="page-title">Rua da Bahia  - 1.070m2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="da0b662c-f015-4600-89ee-9ae891e0ef7e" class="">Lourdes</h1><p id="f232b5f4-f519-4bbc-a5f6-8d41e62f83d5" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="68540daa-0f23-47a8-950f-9f315278e5b5"><div style="font-size:1.5em"><span class="icon">🖼️</span></div><div style="width:100%"><strong>1.070m2 - </strong>esquina<strong> </strong>com 41,5m x 26m de frente</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b3edf147-5b6f-4cf1-946b-5745967e807a"><div style="font-size:1.5em"><span class="icon">🛠</span></div><div style="width:100%">Zoneamento<strong> OP-3</strong> com coeficiente de aproveitamento = <strong>5.0</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="e4f529c0-aebc-4444-9bd8-0533fc8dd51c"><div style="font-size:1.5em"><span class="icon">✅</span></div><div style="width:100%"><strong>Dois dos três proprietários estudam permuta no local</strong></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="906b0d28-094d-4b72-8a65-1b5ed6552ff8"><div style="font-size:1.5em"><span class="icon">🚀</span></div><div style="width:100%">VGV =<strong> R$ 68,4 MM</strong></div></figure><p id="4301ab85-8c02-49c9-9caa-3a991408572f" class="">
+</p><p id="a8487193-516c-4d8c-a238-d0736339fb74" class=""><em><mark class="highlight-gray">👇 Clique nas setas para expandir </mark></em></p><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📍 Localização</summary><div class="indented"><p id="0201aaee-eda2-49e6-bff2-2434b837c93a" class="">
+</p><p id="284c942d-2238-4f2e-87cd-bed45b55ebda" class=""><strong>Rua Bernardo Guimarães 1.493, 1.483 e 1.477 - Lourdes</strong></p><p id="dc9de7df-019c-4239-85fc-c7977fef9273" class="">
+</p><p id="67bcdbbc-dfb6-44af-8590-945746e236ef" class="">Link Google Maps: <a href="https://www.google.com/maps/place/Posto+Petrobras/@-19.9295943,-43.9384689,364m/data=!3m1!1e3!4m15!1m8!3m7!1s0xa699ddfee8434d:0xab7acb6c130a6b71!2sR.+da+Bahia+%26+R.+Bernardo+Guimar%C3%A3es+-+Lourdes,+Belo+Horizonte+-+MG,+30140-071!3b1!8m2!3d-19.9295307!4d-43.9387115!16s%2Fg%2F11hb6sfq5v!3m5!1s0xa699ddfbe6cc8b:0xc0bdafcd9868f1a9!8m2!3d-19.9297334!4d-43.9386233!16s%2Fg%2F1tlwgwjw?entry=ttu">👉 clique aqui</a></p><p id="808412f4-18fb-4a1f-8e26-6f99992afa2f" class="">
+</p><figure id="7cdca0f3-edc6-4c34-b553-51fc5d81b5b5" class="image"><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/RBahia.jpg"><img style="width:1166.99658203125px" src="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/RBahia.jpg"/></a></figure><p id="764eb601-df09-4074-bffa-8f3510224d42" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📐 Dimensões e Zoneamento</summary><div class="indented"><ul id="4ee6e33a-49cf-4cfe-9bdf-5a00ccf4365d" class="bulleted-list"><li style="list-style-type:disc"><strong>Zona Fiscal:</strong> 004</li></ul><ul id="2a36430d-2017-443d-9fdf-6a95f4b1f7a2" class="bulleted-list"><li style="list-style-type:disc"><strong>Quadra: </strong>008</li></ul><ul id="476b6105-a7bf-4183-a792-53975474b494" class="bulleted-list"><li style="list-style-type:disc"><strong>Lotes:</strong> 023A, 024A e 024B</li></ul><ul id="54f37b71-c5a5-450e-84ad-2b08252c3da6" class="bulleted-list"><li style="list-style-type:disc"><strong>Área Total:</strong> <strong>1069,90m2</strong>m²<ul id="7030d7c8-6b44-4da4-90d1-d0cbd8a5ba3c" class="bulleted-list"><li style="list-style-type:circle"><strong>Frentes: </strong>26m (Rua da Bahia) e 41,5m (Rua Bernardo Guimarães) </li></ul></li></ul><ul id="aba54402-62e2-431f-8058-5d2c6c521035" class="bulleted-list"><li style="list-style-type:disc"><strong>Zoneamento:</strong> OP-3<ul id="f006ecc2-877c-4ad2-b1a1-3cf55317eb08" class="bulleted-list"><li style="list-style-type:circle"><strong>CA Máx: </strong>5.0</li></ul><ul id="5a592425-bbbe-4f18-a3e4-c2dc345c490f" class="bulleted-list"><li style="list-style-type:circle"><strong>Cota de terreno por unidade: </strong>N/A</li></ul><ul id="5fbf952a-2045-47b1-9c8b-5c48924b25d4" class="bulleted-list"><li style="list-style-type:circle"><strong>Área Permeável Mínima:</strong> 20%</li></ul><ul id="2276b52a-5696-43fd-9f2b-6745a6d74870" class="bulleted-list"><li style="list-style-type:circle"><strong>⚠️ </strong>Lote 023A com <strong>09m de limitação na altura</strong> para novas edificações e de <strong>43m</strong> nos lotes 024A e 024B</li></ul><ul id="8949d0a7-77d5-468c-96fa-3a65cdf8f253" class="bulleted-list"><li style="list-style-type:circle">⚠️ O terreno 024A é ocupado atualmente por um posto de gasolina, portanto deve passar por processo de <strong>descontaminação do solo</strong> para ter uma nova construção aprovado </li></ul><p id="874ee6bd-5232-47c6-bd7f-780e2522c423" class="">
+</p></li></ul></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">⬇️ Informação Básica</summary><div class="indented"><p id="994649ab-db21-47a0-8f57-30185d759347" class="">
+</p><p id="a1ea557c-25e2-4e88-840a-27a60346fc43" class="">Clique nos links abaixo para baixar: <div class="indented"><ul id="e65f37a8-b15b-4efb-a7a6-eb8a53569620" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?export=download&amp;id=1YDB46zcwDkOqYlP35kgClLDmF_qcdz35&amp;usp=drive_fs">👉 </a><mark class="highlight-gray"><a href="https://drive.google.com/uc?export=download&amp;id=1YDB46zcwDkOqYlP35kgClLDmF_qcdz35&amp;usp=drive_fs">Informação básica - Lote 024</a></mark><mark class="highlight-gray"><span style="border-bottom:0.05em solid">B</span></mark></li></ul><ul id="2f22842d-61bf-4a8c-98ca-2a30febd7d63" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?export=download&amp;id=1YDvQf80baJu0utbwjGrRUkmfTioQOTwa&amp;usp=drive_fs">👉 Informação básica - Lote 0</a><mark class="highlight-gray"><span style="border-bottom:0.05em solid">23A</span></mark></li></ul><ul id="a5a90294-2650-44f6-a499-cfdbdbcd73ff" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/uc?export=download&amp;id=1YCdPMHLVw4NJ1ua19TxXrZHdOCjWIG2x&amp;usp=drive_fs">👉 Informação básica - Lote </a><mark class="highlight-gray"><a href="https://drive.google.com/uc?export=download&amp;id=1YCdPMHLVw4NJ1ua19TxXrZHdOCjWIG2x&amp;usp=drive_fs"><span style="border-bottom:0.05em solid">0</span></a></mark><mark class="highlight-gray"><span style="border-bottom:0.05em solid">24A</span></mark></li></ul><p id="9c0ea7de-323c-48a7-97f7-ef9ec57bac88" class="">
+</p></div></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🏗 <a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%208ac56d3cbefe42fc82e7d9a9933b08a2.html">Viabilidade Arquitetônica</a></summary><div class="indented"><p id="24788d8d-bc7a-4b16-ac59-ef372cab1593" class="">
+</p><p id="bd39e798-9084-426b-a4c6-990228921bd7" class=""><strong><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%208ac56d3cbefe42fc82e7d9a9933b08a2.html">👉 Clique aqui</a></strong></p><p id="6be0c24d-be9b-493e-98f5-e259fced75bd" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📈 Cálculo de VGVr</summary><div class="indented"><figure id="1053ee8e-fa81-80ce-948e-d2d1979ffd17" class="image"><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/image.png"><img style="width:1460.0001220703125px" src="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/image.png"/></a></figure><p id="1053ee8e-fa81-804a-a2a9-e5bdc6ee9784" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📝 Orçamento de ODC/TDC</summary><div class="indented"><p id="5611e61f-1211-4480-82d2-2081c51cbd1a" class="">
+</p><ul id="23848b9c-31e8-4bcd-a8f1-fe8963445c78" class="toggle"><li><details ><summary><strong>✅ ODC = R$ 1.950/m2 (parcelado em 12x)</strong></summary><ul id="3d942f6e-56ba-45a1-bf6a-cc3bbfb7a247" class="bulleted-list"><li style="list-style-type:disc">Em caso de pagamento à vista existe 30% de desconto, portanto <strong>R$ 1.365/m2</strong></li></ul></details></li></ul><ul id="70741f17-599e-4ad6-a6d7-8d9ebd50a2bb" class="toggle"><li><details ><summary>🚧 <strong>TDC</strong> - ainda não orçado</summary></details></li></ul><p id="a21ef455-fb88-40e7-95ed-e04a6e68ad8f" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">💰 Valor do Lote</summary><div class="indented"><p id="3514af60-a394-4e15-80cb-903227d7c233" class="">
+</p><ul id="7b614868-d1eb-459f-94cd-4c1e592d99f9" class="bulleted-list"><li style="list-style-type:disc">Lote 024A: <strong>R$ 5,2M</strong> (incluindo comissão)<strong> </strong><ul id="1053ee8e-fa81-80ac-986d-f5edcbc96558" class="bulleted-list"><li style="list-style-type:circle">O proprietário fecha negócio por <strong>R$ 4.5M</strong></li></ul><ul id="1053ee8e-fa81-8066-a67c-fd77965983f3" class="bulleted-list"><li style="list-style-type:circle">No local, existe um posto de gasolina em operação - com a venda, o posto quebra contrato com a BR Distribuidora e o combinado é que o comprador do lote arque com esta despesa</li></ul><ul id="ed352a02-aa2d-4050-9af9-70cb6ece6136" class="bulleted-list"><li style="list-style-type:circle">Caso o posto possa continuar operando 2 anos após a assinatura do contrato, o cálculo é de <strong>R$ 700k</strong>, a ser pago na demolição do posto</li></ul></li></ul><ul id="c3e3c34d-1406-43e5-9f72-899a31367431" class="bulleted-list"><li style="list-style-type:disc">Lote 024B: <strong>240m2 permutados no local + aluguel mensal de R$ 7k durante as obras</strong></li></ul><ul id="1053ee8e-fa81-804e-bf72-db6d165f20fd" class="bulleted-list"><li style="list-style-type:disc">Lote 023A: <strong>240m2 permutados no local + aluguel mensal de R$ 5k durante as obras</strong></li></ul><p id="09f2a948-8bc2-4599-bb19-5a8a7d2f7e3f" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📊 Viabilidade Econômica</summary><div class="indented"><p id="e5225b1d-0b61-4f70-acd1-b47910b44f3a" class="">
+</p><figure id="1053ee8e-fa81-80b0-b3b9-c50d0f9a9547" class="image"><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/image%201.png"><img style="width:662.9861450195312px" src="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/image%201.png"/></a></figure><p id="0f0fb097-4937-456d-b65c-d9c825670b5f" class="">
+</p><p id="3d9b2236-5b72-4fc1-9ae4-f5d76c0c4e3f" class=""><strong><a href="https://drive.google.com/uc?export=download&amp;id=1Bytlh2cLatCh8kewXKmlTFAySdVm4Hrvus_U3dnYZic?usp=drive_fs">👉 Clique aqui para baixar a planilha</a></strong></p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">🔎 <a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Pesquisa%20de%20Mercado%20292506aec53e4944b7337af384fc5a9f.html">Pesquisa de Mercado</a></summary><div class="indented"><p id="dc7ae6f9-a525-4b7a-84b1-31b8e7482452" class="">
+</p><p id="ac88b64a-6e21-4bb9-b8ed-3e6046c95c8f" class=""><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Pesquisa%20de%20Mercado%20292506aec53e4944b7337af384fc5a9f.html">👉 Clique aqui </a></p><p id="25916bf7-2d92-4284-a417-0206ccbce2cc" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">📞 Contato</summary><div class="indented"><p id="811bb6da-8ca9-4eb4-938a-43335c0e3769" class="">
+</p><p id="c69416c5-d63c-459e-a37e-bf67bfc5e50d" class=""><strong>Athos Bernardes</strong></p><ul id="4f91c611-d47c-49df-8716-a043917931af" class="bulleted-list"><li style="list-style-type:disc">CRECI-MG 55.358</li></ul><ul id="8902aedd-f9d8-47c5-9434-ccbb2895a248" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wa.me/5531988598058?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20terreno%20na%20Rua%20Haiti%2064%2C%20Sion">(31) 98859-8058</a></li></ul><p id="8bd54096-f131-43d1-98ec-952346f971b9" class="">
+</p></div></details><details ><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><strong>🔀 Outros Terrenos</strong></summary><div class="indented"><p id="aa636e8f-ccf2-4b40-86f0-9359eef92817" class="">
+</p><p id="5d5e47ba-cbb4-42b1-a8e3-9d52d784521b" class=""><a href="../Terrenos%20em%20Oferta%2096462f4abab540b68793cd2907ff54d5.html">👉 Conheça nossas outras opções em BH</a></p><p id="83164ae7-e49e-4f38-a002-e98ec4b18ef7" class="">
+</p></div></details><p id="b43777c7-72d5-4ad9-8d38-6bac97105cf9" class="">
+</p><div id="1057030a-2733-4f88-8b22-ba274890d304" class="collection-content"><h4 class="collection-title">MATERIAL DE REFERÊNCIA</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th></tr></thead><tbody><tr id="8ac56d3c-befe-42fc-82e7-d9a9933b08a2"><td class="cell-title"><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Estudo%20de%20Viabilidade%20Arquiteto%CC%82nica%208ac56d3cbefe42fc82e7d9a9933b08a2.html"><span class="icon">🏛️</span>Estudo de Viabilidade Arquitetônica</a></td></tr><tr id="292506ae-c53e-4944-b733-7af384fc5a9f"><td class="cell-title"><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Pesquisa%20de%20Mercado%20292506aec53e4944b7337af384fc5a9f.html"><span class="icon">🤓</span>Pesquisa de Mercado</a></td></tr><tr id="339b355e-c958-4164-b511-1b3e093f40b4"><td class="cell-title"><a href="Rua%20da%20Bahia%20-%201%20070m2%200ebd2064161e41de8543830eec7800e0/MATERIAL%20DE%20REFERE%CC%82NCIA%201057030a27334f888b22ba274890d304/Demanda%20por%20Apartamentos%20339b355ec9584164b5111b3e093f40b4.html"><span class="icon">🏠</span>Demanda por Apartamentos</a></td></tr></tbody></table><br/><br/></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
